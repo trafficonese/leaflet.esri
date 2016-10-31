@@ -1,0 +1,31 @@
+Package: leaflet.esri
+Type: Package
+Title: ESRI bindings for the Leaflet Package
+Version: 0.1.0
+Authors@R: person("Bhaskar", "Karambelkar", email = "bhaskarvk@gmail.com",
+    role = c("aut", "cre"))
+Description: ESRI bindings for the Leaflet Package.
+License: MIT + file LICENSE
+Depends:
+    R (>= 3.1.0),
+    leaflet (>= 1.0.2.9005),
+Encoding: UTF-8
+LazyData: true
+Imports:
+    shiny,
+    htmlwidgets,
+    htmltools,
+    magrittr
+Suggests:
+    V8,
+    dplyr,
+    geojsonio,
+    purrr,
+    readr,
+    stringr,
+    rmapshaper,
+    htmlTable,
+    memoise
+URL: https://github.com/bhaskarvk/leaflet.esri
+BugReports: https://github.com/bhaskarvk/leaflet.esri/issues
+RoxygenNote: 5.0.1
