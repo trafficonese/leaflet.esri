@@ -50,7 +50,8 @@
       this._layers = {};
       this._leafletIds = {};
 
-      this.cluster = new window.L.MarkerClusterGroup(options);
+      //this.cluster = new window.L.MarkerClusterGroup(options);
+      this.cluster = L.markerClusterGroup.layerSupport(options);
       this._key = 'c'+(Math.random() * 1e9).toString(36).replace('.', '_');
 
       // @TODO enable at Leaflet 0.8

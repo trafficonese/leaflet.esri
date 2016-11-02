@@ -1,5 +1,7 @@
-#' Esri Basemap Layers from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html}.
-#' @rdname esri-layers
+#' Esri Basemap Layers.
+#'
+#' BasemapLayer is used to display Esri hosted basemaps and attributes data providers appropriately. The Terms of Use for Esri hosted services apply to all Leaflet applications.
+#' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html}.
 #' @export
 esriBasemapLayers <- list(
   'Streets' = 'Streets',
@@ -12,10 +14,11 @@ esriBasemapLayers <- list(
   'ShadedRelief' = 'ShadedRelief',
   'Terrain' = 'Terrain')
 
-#' Esri basemap labels from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels}.
-#' @rdname esri-layers
+#' Esri basemap labels.
+#'
+#' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels}.
 #' @export
-esriBaseMapLabels <- list(
+esriBasemapLabels <- list(
   'OceansLabels' = 'OceansLabels',
   'GrayLabels' = 'GrayLabels',
   'DarkGrayLabels' = 'DarkGrayLabels',
@@ -31,23 +34,30 @@ esriBaseMapLabels <- list(
 #' @param autoLabels whether to show corresponding labels layer
 #' @param layerId Unique ID for the layer
 #' @param group The group this layer belongs to.
-#' @param options Basemap Layer Options.
-#' @rdname esri-layers
+#' @param options Basemap Layer Options. You can pass \code{\link[leaflet]{tileOptions}()}.
+#' @examples \dontrun{
+#' leaflet() %>%
+#'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)
+#' }
 #' @export
-addEsriBaseMapLayer <- function(
+addEsriBasemapLayer <- function(
   map, key, autoLabels = FALSE,
   layerId = NULL, group = NULL,
-  options = list()) {
+  options = NULL) {
 
   map <- addEsriDependency(map)
 
-  if(!(key %in% esriBasemapLayers || key %in% esriBaseMapLabels)) {
+  if(is.null(options)) {
+    options <- list()
+  }
+
+  if(!(key %in% esriBasemapLayers || key %in% esriBasemapLabels)) {
     stop("Invalid Basemap layer Key")
   }
 
   labelLayer <- NULL
   if(autoLabels) {
-    labelLayer <- esriBaseMapLabels[[sprintf("%sLabels",key)]]
+    labelLayer <- esriBasemapLabels[[sprintf("%sLabels",key)]]
   }
 
   leaflet::invokeMethod(

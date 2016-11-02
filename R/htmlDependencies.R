@@ -22,7 +22,7 @@ esriClusterDependency <- function() {
     htmltools::htmlDependency(
       "esri.leaflet.cluster",version = "1.0.2",
       system.file("htmlwidgets/lib/esri-cluster", package = "leaflet.esri"),
-      script = c("esri-leaflet-clustered-feature-layer.js")
+      script = c("esri-leaflet-clustered-feature-layer-src.js")
     )
   )
 }
@@ -33,7 +33,7 @@ esriClusterDependency <- function() {
 addEsriClusterDependency <- function(map) {
   map$dependencies <- c(map$dependencies,
                         esriDependency(),
-                        leaflet::markerClusterDependencies(),
+                        leaflet::leafletDependencies$markerCluster(),
                         esriClusterDependency())
   map
 }
@@ -77,5 +77,25 @@ addEsriHeatmapDependency <- function(map) {
   map$dependencies <- c(map$dependencies,
                         esriDependency(),
                         esriHeatmapDependency())
+  map
+}
+
+esriRenderersDependency <- function() {
+  list(
+    htmltools::htmlDependency(
+      "esri.leaflet.renderers",version = "1.0.2",
+      system.file("htmlwidgets/lib/esri-renderers", package = "leaflet.esri"),
+      script = c("esri-leaflet-renderers.js")
+    )
+  )
+}
+
+#' Adds esri-leaflet-renderers dependency to the leaflet widget
+#' @export
+#' @rdname esri-dependencies
+addEsriRenderersDependency <- function(map) {
+  map$dependencies <- c(map$dependencies,
+                        esriDependency(),
+                        esriRenderersDependency())
   map
 }

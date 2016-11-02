@@ -1,14 +1,15 @@
 Package: leaflet.esri
 Type: Package
 Title: ESRI bindings for the Leaflet Package
-Version: 0.1.0
+Version: 0.1.2
 Authors@R: person("Bhaskar", "Karambelkar", email = "bhaskarvk@gmail.com",
     role = c("aut", "cre"))
 Description: ESRI bindings for the Leaflet Package.
 License: MIT + file LICENSE
 Depends:
     R (>= 3.1.0),
-    leaflet (>= 1.0.2.9005),
+    leaflet (>= 1.0.2.9008),
+    leaflet.extras (>= 0.1.9005)
 Encoding: UTF-8
 LazyData: true
 Imports:

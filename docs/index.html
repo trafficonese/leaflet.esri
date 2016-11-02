@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Home. leaflet.esri 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">leaflet.esri 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <div class="row">
+  <div class="span8">
+    <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h2>ESRI Leaflet bindings.</h2>
+
+<p>ESRI bindings for the <a href="https://www.github.com/rstudio/leaflet">leaflet</a> package, based on the <a href="https://esri.github.io/esri-leaflet/">ESRI leaflet plugin</a>. This package is part of the leaflet ecosystem of R packages for web mapping.</p>
+
+<p><strong>Compatibility Matrix</strong></p>
+
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="33%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Leaflet JS ver.</th>
+<th>R Leaflet pkg ver.</th>
+<th>esri-leaflet JS Plugin ver.</th>
+<th>R leaflet.esri pkg ver.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v0.7.7">0.7.x</a></td>
+<td><a href="https://github.com/rstudio/leaflet">1.1</a> <sup>1</sup></td>
+<td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v1.0.4">1.0.4</a></td>
+<td>0.1.x</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v1.0.1">1.x</a></td>
+<td>? <sup>2</sup></td>
+<td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v2.0.4">2.x</a></td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+
+<p>1 - Release 1.1 of the leaflet package should hit CRAN very soon, for now <code>devtools::install_github(&#39;rstudio/leaflet&#39;)</code>. <br/> 2 - The R package has not yet been proted to Leaflet JS 1.x</p>
+
+<h3>Features Tracking</h3>
+
+<p><strong>NOTE</strong> It may not be possible to implement each and every feature and the documentation will be updated accordingly. Each feature which is implemented has a tick mark (✔️) next to it. Any description you find in this section is directly taken from the esri-leaflt <a href="https://esri.github.io/esri-leaflet/api-reference/">API reference</a>.</p>
+
+<h4>Authentication Support</h4>
+
+<ul>
+<li>  <a href="https://esri.github.io/esri-leaflet/examples/arcgis-online-auth.html">ArcGIS Online OAuth</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/examples/premium-content.html">Premium ArcGIS Online Content</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/examples/arcgis-server-auth.html">ArcGIS Server Username/Password</a></li>
+</ul>
+
+<h4>Layers</h4>
+
+<p>Layers provide visualization capabilities for data hosted in Feature Services, Map Services and Image Services.</p>
+
+<ul>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html">Basemap Layer</a> ✔️</li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html">Feature Layer</a> - IN Progress</li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html">Cluster Feature Layer</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html">Heat Feature Layer</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html">Dynamic Map Layer</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html">Image Map Layer</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/raster-layer.html">Raster Layer</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html">Tiled Map Layer</a></li>
+<li>  <del><a href="https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html">Vector Basemap</a></del> Cannot be supported for now as this requires leaflet 1.x.</li>
+<li>  <del><a href="https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html">Vector Layer</a></del> Cannot be supported for now as this requires leaflet 1.x.</li>
+</ul>
+
+<h4>Controls</h4>
+
+<ul>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/controls/geosearch.html">Geosearch</a></li>
+</ul>
+
+<h4>Tasks</h4>
+
+<p>Tasks are wrappers for commonly used API methods on ArcGIS services. They expose commonly used parameters to make them more accessible to Leaflet.</p>
+
+<ul>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/query.html">Query</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/find.html">Find</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/identify-features.html">IdentifyFeatures</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/identify-image.html">IdentifyImage</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/geocode.html">Geocode</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/reverse-geocode.html">Reverse Geocode</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/suggest.html">Suggest</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/gp-task.html">Geoprocessing Task</a></li>
+<li>  <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/query-related.html">Query Related</a></li>
+</ul>
+
+<h4>Events</h4>
+
+<p><a href="https://esri.github.io/esri-leaflet/api-reference/events.html">Event</a> types common across components of Esri Leaflet.</p>
+
+<ul>
+<li>  loading</li>
+<li>  load</li>
+<li>  createfeature</li>
+<li>  removefeature</li>
+<li>  addfeature</li>
+<li>  ???</li>
+</ul>
+
+<h3>License</h3>
+
+<p>This package is released under <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<h3>Known Issues</h3>
+
+  </div>
+
+  <div class="span3 offset1 sidebar">
+        <h2>Authors</h2>
+    <ul>
+      <li><a href='mailto:bhaskarvk@gmail.com'>Bhaskar Karambelkar</a> [aut, cre]</li>
+    </ul>
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

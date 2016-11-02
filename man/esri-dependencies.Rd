@@ -5,6 +5,7 @@
 \alias{addEsriDependency}
 \alias{addEsriGeocoderDependency}
 \alias{addEsriHeatmapDependency}
+\alias{addEsriRenderersDependency}
 \title{Adds esri-leaflet dependency to the leaflet widget}
 \usage{
 addEsriDependency(map)
@@ -14,6 +15,8 @@ addEsriClusterDependency(map)
 addEsriGeocoderDependency(map)
 
 addEsriHeatmapDependency(map)
+
+addEsriRenderersDependency(map)
 }
 \arguments{
 \item{map}{The leaflet map widget}
@@ -26,5 +29,7 @@ Adds esri-leaflet-clustered-feature-layer dependency to the leaflet widget
 Adds esri-leaflet-geocoder dependency to the leaflet widget
 
 Adds esri-leaflet-heatmap dependency to the leaflet widget
+
+Adds esri-leaflet-renderers dependency to the leaflet widget
 }
 
