@@ -11,7 +11,6 @@ leaflet() %>% setView(-155.04, 19.31, 9) %>%
     options = tiledMapLayerOptions(tileOptions = list(minZoom=3, maxZoom=10)))
 
 leaflet() %>% setView(-77.0369, 38.9072, 14) %>%
-  #addProviderTiles(providers$CartoDB.Positron) %>%
   addEsriTiledMapLayer(
     url='https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer')
 

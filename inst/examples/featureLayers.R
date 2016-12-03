@@ -1,7 +1,7 @@
 library(leaflet.esri)
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Streets) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 13) %>%
   addEsriFeatureLayer(
     url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0',
@@ -32,7 +32,7 @@ Bus Direction
 
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Streets) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 15) %>%
   addEsriFeatureLayer(
     url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
@@ -53,7 +53,7 @@ leaflet() %>%
     }"))
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Streets) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 15) %>%
   addEsriFeatureLayer(
     url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
@@ -61,17 +61,18 @@ leaflet() %>%
     markerIconProperty = 'direction',
     markerOptions = markerOptions(opacity = 0.8, riseOnHover = TRUE),
     markerIcons = busIcons,
-    clusterOptions = markerClusterOptions())
+    clusterOptions = markerClusterOptions()
+    )
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Gray) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
   setView(-73.926, 40.706, 12) %>%
   addEsriHeatmapFeatureLayer(
     url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Graffiti_Reports/FeatureServer/0',
     radius = 12)
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Gray) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
   setView(-73.926, 40.706, 12) %>%
   addEsriHeatmapFeatureLayer(
     url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Graffiti_Reports/FeatureServer/0',
@@ -85,7 +86,7 @@ leaflet() %>%
     ))
 
 leaflet() %>%
-  addEsriBaseMapLayer(esriBasemapLayers$Gray) %>%
+  addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
   setView(-118.22, 33.836, 8) %>%
   addEsriFeatureLayer(
     url = 'https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Congressional_Districts/FeatureServer/0',
