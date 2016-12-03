@@ -1,3 +1,4 @@
+/* global LeafletWidget, $, L, Shiny, HTMLWidgets */
 LeafletWidget.methods.addEsriBasemapLayer = function(
   key, labelLayer, layerId, group, options) {
   this.layerManager.addLayer(
@@ -19,17 +20,51 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
   labelProperty, labelOptions, popupProperty, popupOptions,
   pathOptions, highlightOptions
   ) {
-  var self = this;
+  var map = this;
   LeafletWidget.methods.addGenericGeoJSONLayer(
-    self,
+    map,
     function getGeoJSONLayer(geoJSONOptions){
+      var featureLayer = null;
       if($.isEmptyObject(clusterOptions)){
-        return L.esri.featureLayer($.extend({url: url},
+        featureLayer = L.esri.featureLayer($.extend({url: url},
           options, pathOptions, geoJSONOptions));
       } else {
-        return L.esri.clusteredFeatureLayer($.extend({url: url},
+        featureLayer = L.esri.clusteredFeatureLayer($.extend({url: url},
           options, pathOptions, geoJSONOptions));
       }
+
+      // events
+      // http://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html
+
+      featureLayer.on('loading', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_featureLayer_loading',
+          {'bounds': e.bounds});
+      });
+      featureLayer.on('load', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_featureLayer_load',
+          {'bounds': e.bounds});
+      });
+      featureLayer.on('createFeature', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_featureLayer_createFeature',
+          {'feature': e.feature});
+      });
+      featureLayer.on('removeFeature', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_featureLayer_removeFeature',
+          {'feature': e.feature, 'permanent' : e.permanent});
+      });
+      featureLayer.on('addFeature', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_featureLayer_addFeature',
+          {'feature': e.feature});
+      });
+
+      // TODO do we need events from http://esri.github.io/esri-leaflet/api-reference/services/service.html ?
+
+      return featureLayer;
     },
     layerId, group,
     false,
@@ -43,12 +78,25 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
 
 LeafletWidget.methods.addEsriHeatmapFeatureLayer = function(
   url, layerId, group, options ) {
-  var self = this;
+  var map = this;
   LeafletWidget.methods.addGenericGeoJSONLayer(
-    self,
+    map,
     function getGeoJSONLayer(geoJsonOptions){
-      //return L.esri.heatmapFeatureLayer($.extend({url: url}, options, geoJsonOptions));
-      return L.esri.heatmapFeatureLayer($.extend({url: url}, options));
+      var heatmapFeatureLayer = L.esri.heatmapFeatureLayer($.extend({url: url}, options));
+      // events
+      // http://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html
+
+      heatmapFeatureLayer.on('loading', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_heatmapFeatureLayer_loading',
+          {'bounds': e.bounds});
+      });
+      heatmapFeatureLayer.on('load', function(e) {
+        if (!HTMLWidgets.shinyMode) return;
+        Shiny.onInputChange(map.id+'_esri_heatmapFeatureLayer_load',
+          {'bounds': e.bounds});
+      });
+      return heatmapFeatureLayer;
     },
     layerId, group,
     false,
