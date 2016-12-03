@@ -56,20 +56,20 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 
 -   [Basemap Layer](https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html) ✔️
 -   [Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html) - IN Progress
-    -   Labels - ✔️
-    -   Popups - ✔️
-    -   Markers w/ Icons - ✔️
-    -   Path Styling
-    -   Path Highlight
+    -   Labels ✔️
+    -   Popups ✔️
+    -   Markers w/ Icons ✔️
+    -   Path Styling ✔️
+    -   Path Highlight ✔️
     -   FitBounds
--   [Cluster Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html)
--   [Heat Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html)
+-   [Cluster Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html) ✔️
+-   [Heat Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html) ✔️
 -   [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html)
 -   [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html)
 -   [Raster Layer](https://esri.github.io/esri-leaflet/api-reference/layers/raster-layer.html)
--   [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html)
+-   [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html) ✔️
 -   ~~[Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)~~ Cannot be supported for now as this requires leaflet 1.x.
--   ~~[Vector Layer](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html)~~ Cannot be supported for now as this requires leaflet 1.x.
+-   [~~Vector Layer~~](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html) Cannot be supported for now as this requires leaflet 1.x.
 
 #### Controls
 

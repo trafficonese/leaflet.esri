@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>addEsriDependency. leaflet.esri 0.1.2</title>
+<title>addEsriBasemapLayer. leaflet.esri 0.1.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -49,45 +49,46 @@
         
       </header>
       
-      <h1>Adds esri-leaflet dependency to the leaflet widget</h1>
+      <h1>Adds a ArcGIS Basemap layer</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='esri-dependencies.html'>addEsriDependency</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">)</span>
-
-<span class="functioncall"><a href='esri-dependencies.html'>addEsriClusterDependency</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">)</span>
-
-<span class="functioncall"><a href='esri-dependencies.html'>addEsriGeocoderDependency</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">)</span>
-
-<span class="functioncall"><a href='esri-dependencies.html'>addEsriHeatmapDependency</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">)</span>
-
-<span class="functioncall"><a href='esri-dependencies.html'>addEsriRenderersDependency</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='addEsriBasemapLayer.html'>addEsriBasemapLayer</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">,</span> <span class="symbol">key</span><span class="keyword">,</span> <span class="argument">autoLabels</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">layerId</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">group</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">options</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>map</dt>
-      <dd>The leaflet map widget</dd>
+      <dd>The leaflet map</dd>
+      <dt>key</dt>
+      <dd>ID of the layer</dd>
+      <dt>autoLabels</dt>
+      <dd>whether to show corresponding labels layer</dd>
+      <dt>layerId</dt>
+      <dd>Unique ID for the layer</dd>
+      <dt>group</dt>
+      <dd>The group this layer belongs to.</dd>
+      <dt>options</dt>
+      <dd>Basemap Layer Options. You can pass <code><a href='http://www.rdocumentation.org/packages/leaflet/topics/map-options'>tileOptions</a>()</code>.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
 
-      <p>Adds esri-leaflet dependency to the leaflet widget</p>
-
-      <p>Adds esri-leaflet-clustered-feature-layer dependency to the leaflet widget</p>
-
-      <p>Adds esri-leaflet-geocoder dependency to the leaflet widget</p>
-
-      <p>Adds esri-leaflet-heatmap dependency to the leaflet widget</p>
-
-      <p>Adds esri-leaflet-renderers dependency to the leaflet widget</p>
+      <p>Adds a ArcGIS Basemap layer</p>
 
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'><span class="comment">## Not run: ------------------------------------</span>
+<span class="comment"># leaflet() %&gt;%</span>
+<span class="comment">#    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)</span>
+<span class="comment">## ---------------------------------------------</span></div></pre>
+  </div>
   <div class="span4 sidebar">
     <!-- <ul>
-      <li>addEsriClusterDependency</li><li>addEsriDependency</li><li>addEsriGeocoderDependency</li><li>addEsriHeatmapDependency</li><li>addEsriRenderersDependency</li>
+      <li>addEsriBasemapLayer</li>
     </ul>
     <ul>
       

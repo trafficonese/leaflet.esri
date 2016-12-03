@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>addEsriTiledMapLayer. leaflet.esri 0.1.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">leaflet.esri 0.1.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Access tiles from ArcGIS Online and ArcGIS Server to visualize and identify features.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='addEsriTiledMapLayer.html'>addEsriTiledMapLayer</a></span><span class="keyword">(</span><span class="symbol">map</span><span class="keyword">,</span> <span class="symbol">url</span><span class="keyword">,</span> <span class="argument">options</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="functioncall"><a href='tiledMapLayerOptions.html'>tiledMapLayerOptions</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">,</span>
+  <span class="argument">layerId</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">group</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>map</dt>
+      <dd>The leaflet map</dd>
+      <dt>url</dt>
+      <dd>URL of the <a href = 'http://resources.arcgis.com/en/help/arcgis-rest-api/#/Map_Service/02r3000000w2000000'>Map Service</a> with a tile cache.</dd>
+      <dt>options</dt>
+      <dd>options for the tiledmap layer.</dd>
+      <dt>layerId</dt>
+      <dd>A unique ID for the layer.</dd>
+      <dt>group</dt>
+      <dd>The name of the group this layer should be added to.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>If you have published a Feature Service in ArcGIS Online, it can be used to create a static set of tiles as well. You can find details about that process in the <a href = 'http://doc.arcgis.com/en/arcgis-online/share-maps/publish-tiles.htm#ESRI_SECTION1_F68FCBD33BD54117B23232D41A762E89'>ArcGIS Online Help</a>.
+Your map service must be published using the Web Mercator Auxiliary Sphere tiling scheme (WKID 102100/3857) and the default scale options used by Google Maps, Bing Maps and <a href = 'http://resources.arcgis.com/en/help/arcgisonline-content/index.html#//011q00000002000000'>ArcGIS Online</a>. Esri Leaflet will not support any other spatial reference for tile layers.</p>
+
+    </div>
+      </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>addEsriTiledMapLayer</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

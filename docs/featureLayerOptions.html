@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>featureLayerOptions. leaflet.esri 0.1.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">leaflet.esri 0.1.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Options for featureLayers.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='featureLayerOptions.html'>featureLayerOptions</a></span><span class="keyword">(</span><span class="argument">where</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">minZoom</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">maxZoom</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">cacheLayers</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">fields</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">from</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">to</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">timeField</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">timeFilterMode</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">simplifyFactor</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">precision</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">token</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">proxy</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">useCors</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">renderer</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>where</dt>
+      <dd>String    An optional expression to filter features server side.
+String values should be denoted using single quotes ie: where: &quot;FIELDNAME = &#39;field value&#39;&quot;; More information about valid SQL syntax can be found at <a href = 'http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/'>http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/</a>.</dd>
+      <dt>minZoom</dt>
+      <dd>Integer    Minimum zoom level of the map that features will display.
+example: minZoom:0</dd>
+      <dt>maxZoom</dt>
+      <dd>Integer    Maximum zoom level of the map that features will
+example: maxZoom:19</dd>
+      <dt>cacheLayers</dt>
+      <dd>Boolean    Will remove layers from the internal cache when they are removed from the map.</dd>
+      <dt>fields</dt>
+      <dd>Array    An array of fieldnames to pull from the service.
+Includes all fields by default. You should always specify the name of the unique id for the service. Usually either &#39;FID&#39; or &#39;OBJECTID&#39;.</dd>
+      <dt>from</dt>
+      <dd>Date    When paired with to defines the time range of features to display.
+Requires the Feature Layer to be time enabled.</dd>
+      <dt>to</dt>
+      <dd>Date    When paired with from defines the time range of features to display.
+Requires the Feature Layer to be time enabled.</dd>
+      <dt>timeField</dt>
+      <dd>false    The name of the field to lookup the time of the feature.
+Can be an object like start:&#39;startTime&#39;, end:&#39;endTime&#39; or a string like &#39;created&#39;.</dd>
+      <dt>timeFilterMode</dt>
+      <dd>&#39;server&#39; (default) or &#39;client&#39;    Determines where features are filtered by time.
+By default features will be filtered by the server. If set to &#39;client&#39; all features are requested and filtered by the app before display.</dd>
+      <dt>simplifyFactor</dt>
+      <dd>Integer    How much to simplify polygons and polylines.
+More means better performance, and less means more accurate representation.</dd>
+      <dt>precision</dt>
+      <dd>Integer    How many digits of precision to request from the server.
+Wikipedia has a great reference of digit precision to meters at <a href = 'http://en.wikipedia.org/wiki/Decimal_degrees'>http://en.wikipedia.org/wiki/Decimal_degrees</a>.</dd>
+      <dt>token</dt>
+      <dd>String    If you pass a token in your options it will be included in all requests to the service.</dd>
+      <dt>proxy</dt>
+      <dd>URL of an <a href = 'https://developers.arcgis.com/javascript/jshelp/ags_proxy.html'>ArcGIS API for JavaScript proxy</a> or <a href = 'https://github.com/Esri/resource-proxy'>ArcGIS Resource Proxy</a> to use for proxying requests.</dd>
+      <dt>useCors</dt>
+      <dd>Boolean    If this service should use CORS when making GET requests.</dd>
+      <dt>renderer</dt>
+      <dd>L.svg or L.canvas    The vector renderer to use to draw the service.
+Usually L.svg but setting to L.canvas contains performance benefits for large polygon layers.</dd>
+      <dt>...</dt>
+      <dd>extra options</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>Options for featureLayers.</p>
+
+    </div>
+      </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>featureLayerOptions</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
