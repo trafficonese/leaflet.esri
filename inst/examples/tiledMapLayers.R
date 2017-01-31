@@ -13,4 +13,3 @@ leaflet() %>% setView(-155.04, 19.31, 9) %>%
 leaflet() %>% setView(-77.0369, 38.9072, 14) %>%
   addEsriTiledMapLayer(
     url='https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer')
-

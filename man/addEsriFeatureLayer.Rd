@@ -13,7 +13,8 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
   popupOptions = leaflet::popupOptions(), stroke = TRUE, color = "#03F",
   weight = 5, opacity = 0.5, fill = TRUE, fillColor = color,
   fillOpacity = 0.2, dashArray = NULL, smoothFactor = 1, noClip = FALSE,
-  pathOptions = leaflet::pathOptions(), highlightOptions = NULL)
+  pathOptions = leaflet::pathOptions(), highlightOptions = NULL,
+  fitBounds = FALSE)
 }
 \arguments{
 \item{map}{The leaflet map}
@@ -51,7 +52,8 @@ options}
 \item{labelProperty}{The property to use for the label.
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
 
-\item{labelOptions}{A Vector of \code{\link{labelOptions}} to provide label}
+\item{labelOptions}{A Vector of \code{\link{labelOptions}} to provide label
+options for each label. Default \code{NULL}}
 
 \item{popupProperty}{The property to use for popup content
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
@@ -86,9 +88,10 @@ pattern}}
 \item{pathOptions}{Options for shapes}
 
 \item{highlightOptions}{Options for highlighting the shape on mouse over.
-options for each label. Default \code{NULL}
-   you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight
-  options}
+you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight}
+
+\item{fitBounds}{Whether to set the maps bounds to fit the data in the featureLayer
+options}
 }
 \description{
 FeatureLayer is used to visualize, style, query and edit vector geographic data hosted in both ArcGIS Online and published using ArcGIS Server. Copyright text from the service is added to map attribution automatically.

@@ -18,7 +18,7 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
   markerIconProperty, markerOptions, markerIconFunction,
   clusterOptions, clusterId,
   labelProperty, labelOptions, popupProperty, popupOptions,
-  pathOptions, highlightOptions
+  pathOptions, highlightOptions, fitBounds
   ) {
   var map = this;
   LeafletWidget.methods.addGenericGeoJSONLayer(
@@ -42,6 +42,12 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
           {'bounds': e.bounds});
       });
       featureLayer.on('load', function(e) {
+        /* Will not work with an older version
+        if(fitBounds) {
+          featureLayer.query().bounds(function (error, latlngbounds) {
+            map.fitBounds(latlngbounds);
+          });
+        } */
         if (!HTMLWidgets.shinyMode) return;
         Shiny.onInputChange(map.id+'_esri_featureLayer_load',
           {'bounds': e.bounds});
@@ -61,6 +67,22 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
         Shiny.onInputChange(map.id+'_esri_featureLayer_addFeature',
           {'feature': e.feature});
       });
+      if(fitBounds) {
+        featureLayer.once("load", function(evt) {
+          // create a new empty Leaflet bounds object
+          var bounds = L.latLngBounds([]);
+          // loop through the features returned by the server
+          fl.eachFeature(function(layer) {
+            // get the bounds of an individual feature
+            var layerBounds = layer.getBounds();
+            // extend the bounds of the collection to fit the bounds of the new feature
+            bounds.extend(layerBounds);
+          });
+
+          // once we've looped through all the features, zoom the map to the extent of the collection
+          map.fitBounds(bounds);
+        });
+      }
 
       // TODO do we need events from http://esri.github.io/esri-leaflet/api-reference/services/service.html ?
 
@@ -110,7 +132,61 @@ LeafletWidget.methods.addEsriHeatmapFeatureLayer = function(
 
 LeafletWidget.methods.addEsriTiledMapLayer = function(
   url, layerId, group, options ) {
-  this.layerManager.addLayer(
-    L.esri.tiledMapLayer($.extend({url: url}, options || {})),
-    "tile", layerId, group);
+
+  var layer =  L.esri.tiledMapLayer($.extend({url: url}, options || {}));
+  // events
+  // https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html#events
+
+  layer.on('loading', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_tiledMapLayer_loading',
+      {'bounds': e.bounds});
+  });
+  layer.on('load', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_tiledMapLayer_load',
+      {'bounds': e.bounds});
+  });
+
+  this.layerManager.addLayer(layer, "tile", layerId, group);
+};
+
+LeafletWidget.methods.addEsriDynamicMapLayer = function(
+  url, layerId, group, options, popupFunction, popupOptions ) {
+
+  var layer = L.esri.dynamicMapLayer($.extend({url: url}, options || {}));
+  // events
+  // https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html#events
+
+  layer.on('loading', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_loading',
+      {'bounds': e.bounds});
+  });
+  layer.on('load', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_load',
+      {'bounds': e.bounds});
+  });
+
+
+  if(popupFunction) {
+    layer.bindPopup(popupFunction, popupOptions || {});
+  }
+
+  // events
+  // https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html#events
+
+  layer.on('loading', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_loading',
+      {'bounds': e.bounds});
+  });
+  layer.on('load', function(e) {
+    if (!HTMLWidgets.shinyMode) return;
+    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_load',
+      {'bounds': e.bounds});
+  });
+
+  this.layerManager.addLayer(layer, "tile", layerId, group);
 };

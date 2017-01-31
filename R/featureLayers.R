@@ -94,6 +94,7 @@ featureLayerOptions <- function(
 #' @param labelProperty The property to use for the label.
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
 #' @param labelOptions A Vector of \code{\link{labelOptions}} to provide label
+#' options for each label. Default \code{NULL}
 #' @param popupProperty The property to use for popup content
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
 #' @param popupOptions A Vector of \code{\link{popupOptions}} to provide popups
@@ -114,8 +115,8 @@ featureLayerOptions <- function(
 #' @param noClip whether to disable polyline clipping
 #' @param pathOptions Options for shapes
 #' @param highlightOptions Options for highlighting the shape on mouse over.
-#' options for each label. Default \code{NULL}
 #'    you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight
+#' @param fitBounds Whether to set the maps bounds to fit the data in the featureLayer
 #'   options
 #' @export
 addEsriFeatureLayer <- function(
@@ -138,7 +139,8 @@ addEsriFeatureLayer <- function(
   smoothFactor = 1.0,
   noClip = FALSE,
   pathOptions = leaflet::pathOptions(),
-  highlightOptions = NULL
+  highlightOptions = NULL,
+  fitBounds = FALSE
 ) {
 
   map$dependencies <- c(map$dependencies,
@@ -186,7 +188,7 @@ addEsriFeatureLayer <- function(
     markerIconProperty, markerOptions, markerIconFunction,
     clusterOptions, clusterId,
     labelProperty, labelOptions, popupProperty, popupOptions,
-    pathOptions, highlightOptions)
+    pathOptions, highlightOptions, fitBounds)
 }
 
 #' Add Esri Heatmap Feature Layer.

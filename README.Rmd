@@ -39,10 +39,11 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 	- Markers w/ Icons ✔️
 	- Path Styling ✔️
 	- Path Highlight ✔️
-	- FitBounds
+	- FitBounds ✔️
+	- Edit Features
 - [Cluster Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html) ✔️
 - [Heat Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html) ✔️
-- [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html)
+- [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html) ✔️
 - [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html)
 - [Raster Layer](https://esri.github.io/esri-leaflet/api-reference/layers/raster-layer.html)
 - [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html) ✔️
