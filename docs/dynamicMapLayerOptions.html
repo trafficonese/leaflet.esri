@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>dynamicMapLayerOptions. leaflet.esri 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">leaflet.esri 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Options for dynamic map layer.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='dynamicMapLayerOptions.html'>dynamicMapLayerOptions</a></span><span class="keyword">(</span><span class="argument">format</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="string">"png24"</span><span class="keyword">,</span> <span class="argument">transparent</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">f</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="string">"json"</span><span class="keyword">,</span>
+  <span class="argument">attribution</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="string">""</span><span class="keyword">,</span> <span class="argument">layers</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">layerDefs</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">opacity</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="number">1</span><span class="keyword">,</span>
+  <span class="argument">position</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="string">"front"</span><span class="keyword">,</span> <span class="argument">maxZoom</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">minZoom</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span>
+  <span class="argument">dynamicLayers</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">token</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">proxy</span>&nbsp;<span class="argument">=</span>&nbsp;NULL<span class="keyword">,</span> <span class="argument">useCors</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="number">TRUE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>format</dt>
+      <dd>Output format of the image.</dd>
+      <dt>transparent</dt>
+      <dd>Allow the server to produce transparent images.</dd>
+      <dt>f</dt>
+      <dd>Server response content type.</dd>
+      <dt>attribution</dt>
+      <dd>Attribution from service metadata copyright text is automatically displayed in Leaflet&#39;s default control. This property can be used for customization.</dd>
+      <dt>layers</dt>
+      <dd>An array of Layer IDs like [3,4,5] to show from the service.</dd>
+      <dt>layerDefs</dt>
+      <dd>A string representing a query to run against the service before the image is rendered. This can be a string like &quot;3:STATE_NAME=&#39;Kansas&#39;&quot; or an object mapping different queries to specific layers 3:&quot;STATE_NAME=&#39;Kansas&#39;&quot;, 2:&quot;POP2007&gt;25000&quot;.</dd>
+      <dt>opacity</dt>
+      <dd>Opacity of the layer. Should be a value between 0 (completely transparent) and 1 (completely opaque).</dd>
+      <dt>position</dt>
+      <dd>Position of the layer relative to other overlays.</dd>
+      <dt>maxZoom</dt>
+      <dd>Closest zoom level the layer will be displayed on the map.</dd>
+      <dt>minZoom</dt>
+      <dd>Furthest zoom level the layer will be displayed on the map.</dd>
+      <dt>dynamicLayers</dt>
+      <dd>JSON object literal used to manipulate the layer symbology defined in the service itself. Requires a 10.1 (or above) map service which supports dynamicLayers requests.</dd>
+      <dt>token</dt>
+      <dd>If you pass a token in your options it will be included in all requests to the service.</dd>
+      <dt>proxy</dt>
+      <dd>URL of an <a href = 'https://developers.arcgis.com/javascript/jshelp/ags_proxy.html'>ArcGIS API for JavaScript proxy</a> or <a href = 'https://github.com/Esri/resource-proxy'>ArcGIS Resource Proxy</a> to use for proxying requests.</dd>
+      <dt>useCors</dt>
+      <dd>If this service should use CORS when making GET requests.</dd>
+      <dt>...</dt>
+      <dd>extra options</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>Options for dynamic map layer.</p>
+
+    </div>
+      </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>dynamicMapLayerOptions</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
