@@ -8,4 +8,6 @@
 \description{
 leaflet.esri.
 }
-
+\author{
+Bhaskar V. Karambelkar
+}

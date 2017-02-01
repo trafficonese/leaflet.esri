@@ -23,4 +23,3 @@ tiledMapLayerOptions(correctZoomLevels = TRUE, zoomOffsetAllowance = 0.1,
 \description{
 Options for TiledMapLayer.
 }
-

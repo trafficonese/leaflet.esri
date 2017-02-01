@@ -1,3 +1,8 @@
+#' ---
+#' title: "Esri Tiled Map Layers"
+#' author: "Bhaskar V. Karambelkar"
+#' ---
+
 library(leaflet.esri)
 
 leaflet() %>% setView(-81.47, 30.70, 12) %>%

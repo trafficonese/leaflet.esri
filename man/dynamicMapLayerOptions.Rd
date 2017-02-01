@@ -43,4 +43,3 @@ dynamicMapLayerOptions(format = "png24", transparent = TRUE, f = "json",
 \description{
 Options for dynamic map layer.
 }
-

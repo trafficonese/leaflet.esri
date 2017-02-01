@@ -182,8 +182,8 @@ addEsriFeatureLayer <- function(
     }
   }
 
-  invokeMethod(
-    map, getMapData(map), 'addEsriFeatureLayer', url, options, layerId, group,
+  leaflet::invokeMethod(
+    map, leaflet::getMapData(map), 'addEsriFeatureLayer', url, options, layerId, group,
     markerType, markerIcons,
     markerIconProperty, markerOptions, markerIconFunction,
     clusterOptions, clusterId,
@@ -209,6 +209,7 @@ addEsriHeatmapFeatureLayer <- function(
     radius = radius,
     gradient = gradient
   )))
-  invokeMethod(
-    map, getMapData(map), 'addEsriHeatmapFeatureLayer', url, layerId, group, options)
+  leaflet::invokeMethod(
+    map, leaflet::getMapData(map),
+    'addEsriHeatmapFeatureLayer', url, layerId, group, options)
 }

@@ -13,4 +13,3 @@ BasemapLayer is used to display Esri hosted basemaps and attributes data provide
 Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html}.
 }
 \keyword{datasets}
-

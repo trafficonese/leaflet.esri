@@ -5,4 +5,5 @@
 #'
 #' @name leaflet.esri
 #' @docType package
+#' @author Bhaskar V. Karambelkar
 NULL

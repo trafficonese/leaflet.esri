@@ -1,5 +1,11 @@
+#' ---
+#' title: "Esri Multiple Feature Layers"
+#' author: "Bhaskar V. Karambelkar"
+#' ---
+
 #' This is a reproduction of http://portal.gulfcouncil.org/coral.html
 #' using FeatureLayers from http://portal.gulfcouncil.org/arcgis/rest/services/CoralWorkingGroup/GMFMCCoralandCoralReefs/MapServer
+#' <br/><br/>
 
 library(leaflet.esri)
 

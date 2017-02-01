@@ -1,4 +1,12 @@
+#' ---
+#' title: "Esri Feature Layers"
+#' author: "Bhaskar V. Karambelkar"
+#' ---
+
 library(leaflet.esri)
+
+#' ### Example 1
+#' Here we use the symbology set that was used when the layer was created (`useServiceSymbology=TRUE`). We specify a property to use for labels and a custom Javascript function for popup contnets.<br/><br/>
 
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
@@ -8,6 +16,9 @@ leaflet() %>%
     useServiceSymbology = TRUE,
     labelProperty = 'COMMON_NAM', labelOptions=labelOptions(textsize = '12px'),
     popupProperty = JS("function(feature) { return L.Util.template('<h3>{COMMON_NAM}</h3><hr /><p>This tree is located at {ADDRESS} and its scientific name is {SCIENTIFIC}.', feature.properties);}"))
+
+#' ### Example 2 & 3
+#' Here instead of using symbology set that was used to create the layer, we customize the icons used for markers.We also add custom Javascript functionality to interactively query the feature layer and filter the results.<br/><br/>
 
 busIcons <-  awesomeIconList(
   North = makeAwesomeIcon(icon = 'arrow-up', library = 'fa', markerColor = 'red'),
@@ -52,6 +63,8 @@ leaflet() %>%
         });
     }"))
 
+#' <br/><br/>In example 3 we show how to enable clustering of markers.<br/><br/>
+
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 15) %>%
@@ -64,12 +77,17 @@ leaflet() %>%
     clusterOptions = markerClusterOptions()
     )
 
+#' ### Example 4 & 5
+#' Here we generate a heat map first with default options and next with customized colors.<br/><br/>
+
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
   setView(-73.926, 40.706, 12) %>%
   addEsriHeatmapFeatureLayer(
     url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Graffiti_Reports/FeatureServer/0',
     radius = 12)
+
+#' <br/><br/>
 
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
@@ -84,6 +102,9 @@ leaflet() %>%
         `0.8` = '#f03b20',
         `1` = '#bd0026'
     ))
+
+#' ### Example 6
+#' Here you see a feature with polygon data and customized styling.
 
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%

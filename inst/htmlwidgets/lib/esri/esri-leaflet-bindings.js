@@ -42,7 +42,7 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
           {'bounds': e.bounds});
       });
       featureLayer.on('load', function(e) {
-        /* Will not work with an older version
+        /* Will not work with an older version of ArcGIS Server
         if(fitBounds) {
           featureLayer.query().bounds(function (error, latlngbounds) {
             map.fitBounds(latlngbounds);
@@ -169,24 +169,34 @@ LeafletWidget.methods.addEsriDynamicMapLayer = function(
       {'bounds': e.bounds});
   });
 
-
   if(popupFunction) {
     layer.bindPopup(popupFunction, popupOptions || {});
   }
 
+  this.layerManager.addLayer(layer, "tile", layerId, group);
+};
+
+LeafletWidget.methods.addEsriImageMapLayer = function(
+  url, layerId, group, options, popupFunction, popupOptions ) {
+
+  var layer = L.esri.imageMapLayer($.extend({url: url}, options || {}));
   // events
-  // https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html#events
+  // https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html#events
 
   layer.on('loading', function(e) {
     if (!HTMLWidgets.shinyMode) return;
-    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_loading',
+    Shiny.onInputChange(map.id+'_esri_imageMapLayer_loading',
       {'bounds': e.bounds});
   });
   layer.on('load', function(e) {
     if (!HTMLWidgets.shinyMode) return;
-    Shiny.onInputChange(map.id+'_esri_dynamicMapLayer_load',
+    Shiny.onInputChange(map.id+'_esri_imageMapLayer_load',
       {'bounds': e.bounds});
   });
+
+  if(popupFunction) {
+    layer.bindPopup(popupFunction, popupOptions || {});
+  }
 
   this.layerManager.addLayer(layer, "tile", layerId, group);
 };

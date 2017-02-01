@@ -57,4 +57,3 @@ Usually L.svg but setting to L.canvas contains performance benefits for large po
 \description{
 Options for featureLayers.
 }
-

@@ -12,4 +12,3 @@ esriBasemapLabels
 Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels}.
 }
 \keyword{datasets}
-

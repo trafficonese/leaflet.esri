@@ -7,6 +7,8 @@ ESRI bindings for the [leaflet](https://www.github.com/rstudio/leaflet) package,
 
 **Compatibility Matrix**
 
+As of Feb, 2017 the leaflet R package is based on version 0.7.7 of the Leaflet Javascript library and therefore the leaflet.esri package is based on version 1.0.4 of esri-leaflet Jaascript library which is the last release compatible with the 0.7.x branch of Leaflet JS. The chart below shows more details.
+
 <table>
 <colgroup>
 <col width="19%" />
@@ -38,11 +40,11 @@ ESRI bindings for the [leaflet](https://www.github.com/rstudio/leaflet) package,
 </tbody>
 </table>
 
-1 - Release 1.1 of the leaflet package should hit CRAN very soon, for now `devtools::install_github('rstudio/leaflet')`. <br/> 2 - The R package has not yet been proted to Leaflet JS 1.x
+1 - Release 1.1 of the leaflet package should hit CRAN very soon, but for now `devtools::install_github('rstudio/leaflet')`. <br/> 2 - The R package has not yet been proted to Leaflet JS 1.x
 
 ### Features Tracking
 
-**NOTE** It may not be possible to implement each and every feature and the documentation will be updated accordingly. Each feature which is implemented has a tick mark (✔️) next to it. Any description you find in this section is directly taken from the esri-leaflt [API reference](https://esri.github.io/esri-leaflet/api-reference/).
+**NOTE** It may not be possible to implement each and every feature and if so the documentation will be updated accordingly. Each feature which is implemented has a tick mark (✔️) next to it. Any description you find in this section is directly taken from the esri-leaflt [API reference](https://esri.github.io/esri-leaflet/api-reference/).
 
 #### Authentication Support
 
@@ -55,7 +57,7 @@ ESRI bindings for the [leaflet](https://www.github.com/rstudio/leaflet) package,
 Layers provide visualization capabilities for data hosted in Feature Services, Map Services and Image Services.
 
 -   [Basemap Layer](https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html) ✔️
--   [Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html) - IN Progress
+-   [Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html) - ✔️ (Except for Edit Features)
     -   Labels ✔️
     -   Popups ✔️
     -   Markers w/ Icons ✔️
@@ -66,8 +68,7 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 -   [Cluster Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html) ✔️
 -   [Heat Feature Layer](https://esri.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html) ✔️
 -   [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html) ✔️
--   [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html)
--   [Raster Layer](https://esri.github.io/esri-leaflet/api-reference/layers/raster-layer.html)
+-   [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html) ✔️
 -   [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html) ✔️
 -   ~~[Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)~~ Cannot be supported for now as this requires leaflet 1.x.
 -   [~~Vector Layer~~](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html) Cannot be supported for now as this requires leaflet 1.x.
@@ -80,10 +81,10 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 
 Tasks are wrappers for commonly used API methods on ArcGIS services. They expose commonly used parameters to make them more accessible to Leaflet.
 
--   [Query](https://esri.github.io/esri-leaflet/api-reference/tasks/query.html)
--   [Find](https://esri.github.io/esri-leaflet/api-reference/tasks/find.html)
--   [IdentifyFeatures](https://esri.github.io/esri-leaflet/api-reference/tasks/identify-features.html)
--   [IdentifyImage](https://esri.github.io/esri-leaflet/api-reference/tasks/identify-image.html)
+-   [Query](https://esri.github.io/esri-leaflet/api-reference/tasks/query.html) ✔️
+-   [Find](https://esri.github.io/esri-leaflet/api-reference/tasks/find.html) ✔️
+-   [IdentifyFeatures](https://esri.github.io/esri-leaflet/api-reference/tasks/identify-features.html) ✔️
+-   [IdentifyImage](https://esri.github.io/esri-leaflet/api-reference/tasks/identify-image.html) ✔️
 -   [Geocode](https://esri.github.io/esri-leaflet/api-reference/tasks/geocode.html)
 -   [Reverse Geocode](https://esri.github.io/esri-leaflet/api-reference/tasks/reverse-geocode.html)
 -   [Suggest](https://esri.github.io/esri-leaflet/api-reference/tasks/suggest.html)
@@ -92,14 +93,13 @@ Tasks are wrappers for commonly used API methods on ArcGIS services. They expose
 
 #### Events
 
-[Event](https://esri.github.io/esri-leaflet/api-reference/events.html) types common across components of Esri Leaflet.
+[Event](https://esri.github.io/esri-leaflet/api-reference/events.html) types common across components of Esri Leaflet. ✔️
 
 -   loading
 -   load
 -   createfeature
 -   removefeature
 -   addfeature
--   ???
 
 ### License
 

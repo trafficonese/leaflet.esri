@@ -15,4 +15,3 @@ addEsriHeatmapFeatureLayer(map, url, radius = 25, gradient = NULL,
 \description{
 Add Esri Heatmap Feature Layer.
 }
-

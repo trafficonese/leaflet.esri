@@ -29,4 +29,3 @@ leaflet() \%>\%
    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)
 }
 }
-

@@ -60,8 +60,8 @@ dynamicMapLayerOptions <- function(
 #' identifying features and more.
 #' Also supports custom popups and identification of features.
 #' @param map The leaflet map
-#' @param url URL of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Map_Service/02r3000000w2000000}{Map Service} with a tile cache.
-#' @param options options for the tiledmap layer.
+#' @param url URL of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Map_Service/02r3000000w2000000/}{Map Service}.
+#' @param options options for the dynamic map layer.
 #' @param popupFunction Uses the provided function to create a popup that will
 #'   identify features whenever the map is clicked.
 #'   Your function will be passed a GeoJSON FeatureCollection of the features
