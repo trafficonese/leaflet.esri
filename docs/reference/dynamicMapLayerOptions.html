@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Options for dynamic map layer. — dynamicMapLayerOptions • leaflet.esri</title>
+<title>Options for dynamic map layer. — dynamicMapLayerOptions • leaflet.extras</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -31,6 +31,8 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
@@ -87,38 +89,69 @@
   <span class='kw'>dynamicLayers</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>token</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>proxy</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>useCors</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>format</dt>
-      <dd>Output format of the image.</dd>
-      <dt>transparent</dt>
-      <dd>Allow the server to produce transparent images.</dd>
-      <dt>f</dt>
-      <dd>Server response content type.</dd>
-      <dt>attribution</dt>
-      <dd>Attribution from service metadata copyright text is automatically displayed in Leaflet&#39;s default control. This property can be used for customization.</dd>
-      <dt>layers</dt>
-      <dd>An array of Layer IDs like [3,4,5] to show from the service.</dd>
-      <dt>layerDefs</dt>
-      <dd>A string representing a query to run against the service before the image is rendered. This can be a string like &quot;3:STATE_NAME=&#39;Kansas&#39;&quot; or an object mapping different queries to specific layers 3:&quot;STATE_NAME=&#39;Kansas&#39;&quot;, 2:&quot;POP2007&gt;25000&quot;.</dd>
-      <dt>opacity</dt>
-      <dd>Opacity of the layer. Should be a value between 0 (completely transparent) and 1 (completely opaque).</dd>
-      <dt>position</dt>
-      <dd>Position of the layer relative to other overlays.</dd>
-      <dt>maxZoom</dt>
-      <dd>Closest zoom level the layer will be displayed on the map.</dd>
-      <dt>minZoom</dt>
-      <dd>Furthest zoom level the layer will be displayed on the map.</dd>
-      <dt>dynamicLayers</dt>
-      <dd>JSON object literal used to manipulate the layer symbology defined in the service itself. Requires a 10.1 (or above) map service which supports dynamicLayers requests.</dd>
-      <dt>token</dt>
-      <dd>If you pass a token in your options it will be included in all requests to the service.</dd>
-      <dt>proxy</dt>
-      <dd>URL of an <a href = 'ArcGIS API for JavaScript proxy'>https://developers.arcgis.com/javascript/jshelp/ags_proxy.html</a> or <a href = 'ArcGIS Resource Proxy'>https://github.com/Esri/resource-proxy</a> to use for proxying requests.</dd>
-      <dt>useCors</dt>
-      <dd>If this service should use CORS when making GET requests.</dd>
-      <dt>...</dt>
-      <dd>extra options</dd>
-    </dl>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>format</th>
+      <td><p>Output format of the image.</p></td>
+    </tr>
+    <tr>
+      <th>transparent</th>
+      <td><p>Allow the server to produce transparent images.</p></td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td><p>Server response content type.</p></td>
+    </tr>
+    <tr>
+      <th>attribution</th>
+      <td><p>Attribution from service metadata copyright text is automatically displayed in Leaflet's default control. This property can be used for customization.</p></td>
+    </tr>
+    <tr>
+      <th>layers</th>
+      <td><p>An array of Layer IDs like [3,4,5] to show from the service.</p></td>
+    </tr>
+    <tr>
+      <th>layerDefs</th>
+      <td><p>A string representing a query to run against the service before the image is rendered. This can be a string like "3:STATE_NAME='Kansas'" or an object mapping different queries to specific layers 3:"STATE_NAME='Kansas'", 2:"POP2007&gt;25000".</p></td>
+    </tr>
+    <tr>
+      <th>opacity</th>
+      <td><p>Opacity of the layer. Should be a value between 0 (completely transparent) and 1 (completely opaque).</p></td>
+    </tr>
+    <tr>
+      <th>position</th>
+      <td><p>Position of the layer relative to other overlays.</p></td>
+    </tr>
+    <tr>
+      <th>maxZoom</th>
+      <td><p>Closest zoom level the layer will be displayed on the map.</p></td>
+    </tr>
+    <tr>
+      <th>minZoom</th>
+      <td><p>Furthest zoom level the layer will be displayed on the map.</p></td>
+    </tr>
+    <tr>
+      <th>dynamicLayers</th>
+      <td><p>JSON object literal used to manipulate the layer symbology defined in the service itself. Requires a 10.1 (or above) map service which supports dynamicLayers requests.</p></td>
+    </tr>
+    <tr>
+      <th>token</th>
+      <td><p>If you pass a token in your options it will be included in all requests to the service.</p></td>
+    </tr>
+    <tr>
+      <th>proxy</th>
+      <td><p>URL of an <a href = 'https://developers.arcgis.com/javascript/jshelp/ags_proxy.html'>ArcGIS API for JavaScript proxy</a> or <a href = 'https://github.com/Esri/resource-proxy'>ArcGIS Resource Proxy</a> to use for proxying requests.</p></td>
+    </tr>
+    <tr>
+      <th>useCors</th>
+      <td><p>If this service should use CORS when making GET requests.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>extra options</p></td>
+    </tr>
+    </table>
     
 
   </div>
@@ -133,7 +166,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Bhaskar Karambelkar.</p>
+  <p>Developed by <a href='https://www.karambelkar.info/'>Bhaskar Karambelkar</a>.</p>
 </div>
 
 <div class="pkgdown">
@@ -142,6 +175,23 @@
 
       </footer>
    </div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//apps.karambelkar.info/pk/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//apps.karambelkar.info/pk/piwik.php?idsite=4&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 
   </body>
 </html>

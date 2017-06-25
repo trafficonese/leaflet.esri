@@ -4,9 +4,11 @@
 \name{leaflet.esri}
 \alias{leaflet.esri}
 \alias{leaflet.esri-package}
-\title{leaflet.esri.}
+\title{leaflet.esri: 'ESRI' bindings for the 'leaflet' Package.}
 \description{
-leaflet.esri.
+An add-on package to the 'leaflet' package, which provides bindings for 'ESRI' services.
+This package allows a user to add 'ESRI' provided services such as
+'MapService', 'ImageMapService', 'TiledMapService' etc. to a 'leaflet' map.
 }
 \author{
 Bhaskar V. Karambelkar

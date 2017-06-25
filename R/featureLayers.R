@@ -193,6 +193,12 @@ addEsriFeatureLayer <- function(
 
 #' Add Esri Heatmap Feature Layer.
 #'
+#' @param map The leaflet map
+#' @param url url of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/}{FeatureService} or \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/}{MapService}.
+#' @param options options for the featurelayer
+#' @param layerId A unique ID for the layer.
+#' @param group The name of the group this layer should be added to.
+#'   the same parameter under \code{\link{addTiles}})
 #' @param radius Radius for the heatmap
 #' @param gradient The gradient
 #' @export

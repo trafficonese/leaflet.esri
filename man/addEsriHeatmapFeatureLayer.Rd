@@ -8,9 +8,20 @@ addEsriHeatmapFeatureLayer(map, url, radius = 25, gradient = NULL,
   options = featureLayerOptions(), layerId = NULL, group = NULL)
 }
 \arguments{
+\item{map}{The leaflet map}
+
+\item{url}{url of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/}{FeatureService} or \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/}{MapService}.}
+
 \item{radius}{Radius for the heatmap}
 
 \item{gradient}{The gradient}
+
+\item{options}{options for the featurelayer}
+
+\item{layerId}{A unique ID for the layer.}
+
+\item{group}{The name of the group this layer should be added to.
+the same parameter under \code{\link{addTiles}})}
 }
 \description{
 Add Esri Heatmap Feature Layer.

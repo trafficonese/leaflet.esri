@@ -1,0 +1,44 @@
+title: leaflet.extras
+authors:
+  Bhaskar Karambelkar:
+    href: https://www.karambelkar.info/
+
+template:
+  package: pkgdown.bvk
+  params:
+    bootswatch: yeti
+
+reference:
+- title: Package Documentation
+  desc: ~
+  contents:
+  - '`leaflet.esri`'
+  - '`addEsriDependency`'
+- title: Base Maps
+  desc: ~
+  contents:
+  - '`addEsriBasemapLayer`'
+  - '`esriBasemapLabels`'
+  - '`esriBasemapLayers`'
+- title: Feature Layer
+  desc: ~
+  contents:
+  - '`addEsriFeatureLayer`'
+  - '`featureLayerOptions`'
+  - '`addEsriHeatmapFeatureLayer`'
+- title: Dynamic Map Layer
+  desc: ~
+  contents:
+  - '`addEsriDynamicMapLayer`'
+  - '`dynamicMapLayerOptions`'
+- title: Image Map Layer
+  desc: ~
+  contents:
+  - '`addEsriImageMapLayer`'
+  - '`imageMapLayerOptions`'
+- title: Tiled Map Layer
+  desc: ~
+  contents:
+  - '`addEsriTiledMapLayer`'
+  - '`tiledMapLayerOptions`'
+

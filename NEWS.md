@@ -1,3 +1,9 @@
+# leaflet.esri 0.2
+
+## Major changes
+
+- Made the package CRAN ready
+
 # leaflet.esri 0.1.3
 
 ## Major changes

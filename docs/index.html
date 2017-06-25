@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ESRI bindings for the Leaflet Package • leaflet.esri</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>'ESRI' Bindings for the 'leaflet' Package • leaflet.extras</title>
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="jquery.sticky-kit.min.js"></script><script src="pkgdown.js"></script><!-- mathjax --><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -58,11 +58,11 @@
     
     
 <div class="contents">
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <div id="esri-leaflet-bindings-" class="section level2">
 <h2 class="hasAnchor">
-<a href="#esri-leaflet-bindings-" class="anchor"> </a>ESRI Leaflet bindings.</h2>
-
+<a href="#esri-leaflet-bindings-" class="anchor"></a>ESRI Leaflet bindings.</h2>
+<p>ESRI bindings for the <a href="https://www.github.com/rstudio/leaflet">leaflet</a> package, based on the <a href="https://esri.github.io/esri-leaflet/">ESRI leaflet plugin</a>. This package is part of the leaflet ecosystem of R packages for web mapping.</p>
 <p><strong>Compatibility Matrix</strong></p>
 <p>As of Feb, 2017 the leaflet R package is based on version 0.7.7 of the Leaflet Javascript library and therefore the leaflet.esri package is based on version 1.0.4 of esri-leaflet Jaascript library which is the last release compatible with the 0.7.x branch of Leaflet JS. The chart below shows more details.</p>
 <table class="table">
@@ -81,29 +81,27 @@
 <tbody>
 <tr class="odd">
 <td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v0.7.7">0.7.x</a></td>
-<td>
-<a href="https://github.com/rstudio/leaflet">1.1</a> <sup>1</sup>
-</td>
+<td><a href="https://github.com/rstudio/leaflet">1.1</a></td>
 <td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v1.0.4">1.0.4</a></td>
-<td>0.1.x</td>
+<td>0.2.x</td>
 </tr>
 <tr class="even">
 <td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v1.0.1">1.x</a></td>
-<td>? <sup>2</sup>
+<td>? <sup>1</sup>
 </td>
 <td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v2.0.4">2.x</a></td>
 <td>?</td>
 </tr>
 </tbody>
 </table>
-<p>1 - Release 1.1 of the leaflet package should hit CRAN very soon, but for now <code>devtools::install_github('rstudio/leaflet')</code>. <br> 2 - The R package has not yet been proted to Leaflet JS 1.x</p>
+<p>1 - The R package has not yet been proted to Leaflet JS 1.x</p>
 <div id="features-tracking" class="section level3">
 <h3 class="hasAnchor">
-<a href="#features-tracking" class="anchor"> </a>Features Tracking</h3>
+<a href="#features-tracking" class="anchor"></a>Features Tracking</h3>
 <p><strong>NOTE</strong> It may not be possible to implement each and every feature and if so the documentation will be updated accordingly. Each feature which is implemented has a tick mark (✔️) next to it. Any description you find in this section is directly taken from the esri-leaflt <a href="https://esri.github.io/esri-leaflet/api-reference/">API reference</a>.</p>
 <div id="authentication-support" class="section level4">
 <h4 class="hasAnchor">
-<a href="#authentication-support" class="anchor"> </a>Authentication Support</h4>
+<a href="#authentication-support" class="anchor"></a>Authentication Support</h4>
 <ul>
 <li><a href="https://esri.github.io/esri-leaflet/examples/arcgis-online-auth.html">ArcGIS Online OAuth</a></li>
 <li><a href="https://esri.github.io/esri-leaflet/examples/premium-content.html">Premium ArcGIS Online Content</a></li>
@@ -112,7 +110,7 @@
 </div>
 <div id="layers" class="section level4">
 <h4 class="hasAnchor">
-<a href="#layers" class="anchor"> </a>Layers</h4>
+<a href="#layers" class="anchor"></a>Layers</h4>
 <p>Layers provide visualization capabilities for data hosted in Feature Services, Map Services and Image Services.</p>
 <ul>
 <li>
@@ -147,14 +145,14 @@
 </div>
 <div id="controls" class="section level4">
 <h4 class="hasAnchor">
-<a href="#controls" class="anchor"> </a>Controls</h4>
+<a href="#controls" class="anchor"></a>Controls</h4>
 <ul>
 <li><a href="https://esri.github.io/esri-leaflet/api-reference/controls/geosearch.html">Geosearch</a></li>
 </ul>
 </div>
 <div id="tasks" class="section level4">
 <h4 class="hasAnchor">
-<a href="#tasks" class="anchor"> </a>Tasks</h4>
+<a href="#tasks" class="anchor"></a>Tasks</h4>
 <p>Tasks are wrappers for commonly used API methods on ArcGIS services. They expose commonly used parameters to make them more accessible to Leaflet.</p>
 <ul>
 <li>
@@ -174,7 +172,7 @@
 </div>
 <div id="events" class="section level4">
 <h4 class="hasAnchor">
-<a href="#events" class="anchor"> </a>Events</h4>
+<a href="#events" class="anchor"></a>Events</h4>
 <p><a href="https://esri.github.io/esri-leaflet/api-reference/events.html">Event</a> types common across components of Esri Leaflet. ✔️</p>
 <ul>
 <li>loading</li>
@@ -185,21 +183,18 @@
 </ul>
 </div>
 </div>
-<div id="license" class="section level3">
+<div id="code-of-conduct" class="section level3">
 <h3 class="hasAnchor">
-<a href="#license" class="anchor"> </a>License</h3>
-<p>This package is released under <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
-</div>
-<div id="known-issues" class="section level3">
-<h3 class="hasAnchor">
-<a href="#known-issues" class="anchor"> </a>Known Issues</h3>
+<a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h3>
+<p>Please note that this project is released with a <a href="CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 </div>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Links</h2>
+    <h2 class="hasAnchor">
+<a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
 <li>Browse source code at <br><a href="https://github.com/bhaskarvk/leaflet.esri">https://​github.com/​bhaskarvk/​leaflet.esri</a>
 </li>
@@ -207,25 +202,32 @@
 </li>
 </ul>
 <h2>License</h2>
-<p><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE">LICENSE</a></p>
+<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> | file <a href="LICENSE.html">LICENSE</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Bhaskar Karambelkar <br><small class="roles"> Author, maintainer </small> </li>
+<li>
+<a href="https://www.karambelkar.info/">Bhaskar Karambelkar</a> <br><small class="roles"> Author, maintainer </small> </li>
 </ul>
-<html><body>
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.github.com/rstudio/leaflet">leaflet</a></li>
-<li><a href="https://esri.github.io/esri-leaflet/">ESRI leaflet plugin</a></li>
+<li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project is being actively developed."></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2017--06--25-green.svg" alt="Last-changedate"></a></li>
+<li><a href="https://opensource.org/licenses/GPL-3.0"><img src="https://img.shields.io/badge/License-GPLv3-yellow.svg" alt="License: GPL-3"></a></li>
+<li><a href="https://gist.github.com/bhaskarvk/46fbf2ba7b5713151d7e"><img src="https://img.shields.io/badge/keybase-verified-brightgreen.svg" alt="keybase verified"></a></li>
+<li><a href="https://travis-ci.org/bhaskarvk/leaflet.esri"><img src="https://travis-ci.org/bhaskarvk/leaflet.esri.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://ci.appveyor.com/project/bhaskarvk/leaflet.esri"><img src="https://ci.appveyor.com/api/projects/status/github/bhaskarvk/leaflet.esri?branch=master&amp;svg=true"></a></li>
+<li><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.1.0-6666ff.svg" alt="minimal R version"></a></li>
+<li><a href="commits/master"><img src="https://img.shields.io/badge/Package%20version-0.2-orange.svg?style=flat-square" alt="packageversion"></a></li>
+<li><a href="https://cran.r-project.org/package=leaflet.esri"><img src="http://www.r-pkg.org/badges/version/leaflet.esri"></a></li>
+<li><a href="http://cran.rstudio.com/web/packages/leaflet.esri/index.html"><img src="http://cranlogs.r-pkg.org/badges/grand-total/leaflet.esri"></a></li>
 </ul>
-</body></html>
 </div>
 
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Bhaskar Karambelkar.</p>
+  <p>Developed by <a href="https://www.karambelkar.info/">Bhaskar Karambelkar</a>.</p>
 </div>
 
 <div class="pkgdown">
@@ -234,6 +236,22 @@
 
       </footer>
 </div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//apps.karambelkar.info/pk/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script><noscript><p><img src="//apps.karambelkar.info/pk/piwik.php?idsite=4&amp;rec=1" style="border:0;" alt=""></p></noscript>
+<!-- End Piwik Code -->
 
   </body>
 </html>
