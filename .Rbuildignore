@@ -14,3 +14,4 @@
 ^appveyor\.yml$
 ^\_pkgdown\.yaml$
 ^CONDUCT\.md$
+^\.Rprofile\.local$

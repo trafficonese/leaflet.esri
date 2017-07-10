@@ -1,7 +1,7 @@
 Package: leaflet.esri
 Type: Package
 Title: 'ESRI' Bindings for the 'leaflet' Package
-Version: 0.2
+Version: 0.2.9000
 Authors@R: person("Bhaskar", "Karambelkar", email = "bhaskarvk@gmail.com",
     role = c("aut", "cre"))
 Description: An add-on package to the 'leaflet' package, which provides bindings for 'ESRI' services. This package allows a user to add 'ESRI' provided services such as 'MapService', 'ImageMapService', 'TiledMapService' etc. to a 'leaflet' map.
@@ -27,6 +27,6 @@ Suggests:
     rmapshaper,
     htmlTable,
     memoise
-URL: https://github.com/bhaskarvk/leaflet.esri
+URL: https://github.com/bhaskarvk/leaflet.esri,https://bhaskarvk.github.io/leaflet.esri/
 BugReports: https://github.com/bhaskarvk/leaflet.esri/issues
 RoxygenNote: 6.0.1
