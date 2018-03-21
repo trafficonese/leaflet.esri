@@ -128,4 +128,3 @@ leaflet() %>%
                         return {fillColor: 'white'};
                     }
                  }")))
-
