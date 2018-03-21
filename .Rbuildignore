@@ -18,3 +18,4 @@
 ^scripts
 ^revdep
 ^viztest
+^\.lintr$
