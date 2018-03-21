@@ -30,7 +30,7 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
 \item{group}{The name of the group this layer should be added to.
 the same parameter under \code{\link{addTiles}})}
 
-\item{markerType}{The type of marker.  either 'marker' or 'circleMarker'}
+\item{markerType}{The type of marker.  either "marker" or "circleMarker"}
 
 \item{markerIcons}{Icons for Marker.}
 

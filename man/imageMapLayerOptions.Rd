@@ -23,10 +23,10 @@ imageMapLayerOptions(format = "jpgpng", f = "json", opacity = 1,
 
 \item{minZoom}{Furthest zoom level the layer will be displayed on the map.}
 
-\item{from}{Date    When paired with to defines the time range of data to display.
+\item{from}{Date When paired with to defines the time range of data to display.
 Requires the Image Layer to be time enabled.}
 
-\item{to}{Date    When paired with from defines the time range of data to display.
+\item{to}{Date When paired with from defines the time range of data to display.
 Requires the Image Layer to be time enabled.}
 
 \item{bandIds}{If there are multiple bands, you can specify which bands to export.}

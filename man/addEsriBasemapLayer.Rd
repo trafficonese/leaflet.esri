@@ -26,6 +26,6 @@ Adds a ArcGIS Basemap layer
 \examples{
 \dontrun{
 leaflet() \%>\%
-   addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)
+   addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels = TRUE)
 }
 }
