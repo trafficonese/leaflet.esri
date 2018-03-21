@@ -1,46 +1,46 @@
 #' Options for image map layer.
 #'
-#' @param format	Output format of the image.
-#' @param f	Server response content type.
-#' @param opacity	Opacity of the layer. Should be a value between 0 and 1.
-#' @param position	Position of the layer relative to other overlays.
-#' @param maxZoom	Closest zoom level the layer will be displayed on the map.
-#' @param minZoom	Furthest zoom level the layer will be displayed on the map.
-#' @param from	Date	When paired with to defines the time range of data to display.
+#' @param format Output format of the image.
+#' @param f Server response content type.
+#' @param opacity Opacity of the layer. Should be a value between 0 and 1.
+#' @param position Position of the layer relative to other overlays.
+#' @param maxZoom Closest zoom level the layer will be displayed on the map.
+#' @param minZoom Furthest zoom level the layer will be displayed on the map.
+#' @param from Date When paired with to defines the time range of data to display.
 #' Requires the Image Layer to be time enabled.
-#' @param to	Date	When paired with from defines the time range of data to display.
+#' @param to Date When paired with from defines the time range of data to display.
 #' Requires the Image Layer to be time enabled.
-#' @param bandIds	If there are multiple bands, you can specify which bands to export.
-#' @param noData	The pixel value representing no information.
-#' @param noDataInterpretation	Interpretation of the noData setting.
-#' @param pixelType	Leave pixelType as unspecified, or UNKNOWN, in most exportImage use cases,
+#' @param bandIds If there are multiple bands, you can specify which bands to export.
+#' @param noData The pixel value representing no information.
+#' @param noDataInterpretation Interpretation of the noData setting.
+#' @param pixelType Leave pixelType as unspecified, or UNKNOWN, in most exportImage use cases,
 #'   unless such pixelType is desired.
 #'   Possible values: C128, C64, F32, F64, S16, S32, S8, U1, U16, U2, U32, U4, U8, UNKNOWN.
-#' @param renderingRule	A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Raster_function_objects/02r3000000rv000000/}{raster function}
-#' @param mosaicRule	A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Mosaic_rule_objects/02r3000000s4000000/}{mosaic rule}
-#' @param token	If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy	URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
-#' @param useCors	If this service should use CORS when making GET requests.
+#' @param renderingRule A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Raster_function_objects/02r3000000rv000000/}{raster function}
+#' @param mosaicRule A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Mosaic_rule_objects/02r3000000s4000000/}{mosaic rule}
+#' @param token If you pass a token in your options it will be included in all requests to the service.
+#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param useCors If this service should use CORS when making GET requests.
 #' @param ... extra options
 #' @export
 imageMapLayerOptions <- function(
-  format = 'jpgpng',
-  f	=	'json',
-  opacity	=	1,
-  position	=	'front',
-  maxZoom	= NULL,
-  minZoom	 = NULL,
+  format = "jpgpng",
+  f = "json",
+  opacity = 1,
+  position = "front",
+  maxZoom = NULL,
+  minZoom = NULL,
   from = NULL,
   to = NULL,
-  bandIds	= NULL,
-  noData	= NULL,
-  noDataInterpretation	= NULL,
-  pixelType	= NULL,
-  renderingRule	= NULL,
-  mosaicRule	= NULL,
-  token	= NULL,
-  proxy	= NULL,
-  useCors	= TRUE,
+  bandIds = NULL,
+  noData = NULL,
+  noDataInterpretation = NULL,
+  pixelType = NULL,
+  renderingRule = NULL,
+  mosaicRule = NULL,
+  token = NULL,
+  proxy = NULL,
+  useCors = TRUE,
   ...
 ) {
   leaflet::filterNULL(list(
@@ -86,11 +86,11 @@ addEsriImageMapLayer <- function(
   popupFunction = NULL, popupOptions = NULL,
   layerId = NULL, group = NULL) {
   map <- addEsriDependency(map)
-  if(is.null(options)) {
+  if (is.null(options)) {
     options <- list()
   }
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriImageMapLayer', url, layerId, group,
+    "addEsriImageMapLayer", url, layerId, group,
     options, popupFunction, popupOptions)
 }
