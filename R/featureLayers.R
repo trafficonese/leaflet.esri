@@ -1,30 +1,30 @@
 #' Options for featureLayers.
 #'
-#' @param where	String	An optional expression to filter features server side.
-#'  String values should be denoted using single quotes ie: where: "FIELDNAME = 'field value'"; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.
-#' @param minZoom	Integer	Minimum zoom level of the map that features will display.
+#' @param where String An optional expression to filter features server side.
+#'  String values should be denoted using single quotes ie: where: "FIELDNAME = "field value""; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.
+#' @param minZoom Integer Minimum zoom level of the map that features will display.
 #' example: minZoom:0
-#' @param maxZoom	Integer	Maximum zoom level of the map that features will
+#' @param maxZoom Integer Maximum zoom level of the map that features will
 #' example: maxZoom:19
-#' @param cacheLayers	Boolean	Will remove layers from the internal cache when they are removed from the map.
-#' @param fields	Array	An array of fieldnames to pull from the service.
-#' Includes all fields by default. You should always specify the name of the unique id for the service. Usually either 'FID' or 'OBJECTID'.
-#' @param from	Date	When paired with to defines the time range of features to display.
+#' @param cacheLayers Boolean Will remove layers from the internal cache when they are removed from the map.
+#' @param fields Array An array of fieldnames to pull from the service.
+#' Includes all fields by default. You should always specify the name of the unique id for the service. Usually either "FID" or "OBJECTID".
+#' @param from Date When paired with to defines the time range of features to display.
 #' Requires the Feature Layer to be time enabled.
-#' @param to	Date	When paired with from defines the time range of features to display.
+#' @param to Date When paired with from defines the time range of features to display.
 #' Requires the Feature Layer to be time enabled.
-#' @param timeField	false	The name of the field to lookup the time of the feature.
-#' Can be an object like {start:'startTime', end:'endTime'} or a string like 'created'.
-#' @param timeFilterMode	'server' (default) or 'client'	Determines where features are filtered by time.
-#' By default features will be filtered by the server. If set to 'client' all features are requested and filtered by the app before display.
-#' @param simplifyFactor	Integer	How much to simplify polygons and polylines.
+#' @param timeField false The name of the field to lookup the time of the feature.
+#' Can be an object like {start:"startTime", end:"endTime"} or a string like "created".
+#' @param timeFilterMode "server" (default) or "client" Determines where features are filtered by time.
+#' By default features will be filtered by the server. If set to "client" all features are requested and filtered by the app before display.
+#' @param simplifyFactor Integer How much to simplify polygons and polylines.
 #' More means better performance, and less means more accurate representation.
-#' @param precision	Integer	How many digits of precision to request from the server.
+#' @param precision Integer How many digits of precision to request from the server.
 #' Wikipedia has a great reference of digit precision to meters at \url{http://en.wikipedia.org/wiki/Decimal_degrees}.
-#' @param token	String	If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy	URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
-#' @param useCors	Boolean	If this service should use CORS when making GET requests.
-#' @param renderer	L.svg or L.canvas	The vector renderer to use to draw the service.
+#' @param token String If you pass a token in your options it will be included in all requests to the service.
+#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param useCors Boolean If this service should use CORS when making GET requests.
+#' @param renderer L.svg or L.canvas The vector renderer to use to draw the service.
 #' Usually L.svg but setting to L.canvas contains performance benefits for large polygon layers.
 #' @param ... extra options
 #' @export
@@ -78,7 +78,7 @@ featureLayerOptions <- function(
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
 #'   the same parameter under \code{\link{addTiles}})
-#' @param markerType The type of marker.  either 'marker' or 'circleMarker'
+#' @param markerType The type of marker.  either "marker" or "circleMarker"
 #' @param markerIcons Icons for Marker.
 #' @param markerIconProperty The property of the feature to use for marker icon.
 #' Can be a JS function which accepts a feature and returns an index of \code{markerIcons}.
@@ -146,7 +146,7 @@ addEsriFeatureLayer <- function(
   map$dependencies <- c(map$dependencies,
                         leaflet.extras::leafletExtrasDependencies$omnivore())
 
-  if(useServiceSymbology) {
+  if (useServiceSymbology) {
     map <- addEsriRenderersDependency(map)
   } else {
     map <- addEsriDependency(map)
@@ -157,33 +157,33 @@ addEsriFeatureLayer <- function(
     map <- addEsriClusterDependency(map)
   }
 
-  pathOptions = c(pathOptions, list(
+  pathOptions <- c(pathOptions, list(
     stroke = stroke, color = color, weight = weight, opacity = opacity,
     fill = fill, fillColor = fillColor, fillOpacity = fillOpacity,
     dashArray = dashArray, smoothFactor = smoothFactor, noClip = noClip))
 
   markerIconFunction <- NULL
-  if(!is.null(markerIcons)) {
-    if(inherits(markerIcons,'leaflet_icon_set') ||
-       inherits(markerIcons, 'leaflet_icon')) {
+  if (!is.null(markerIcons)) {
+    if (inherits(markerIcons, "leaflet_icon_set") ||
+       inherits(markerIcons, "leaflet_icon")) {
       markerIconFunction <- defIconFunction
-    } else if(inherits(markerIcons,'leaflet_awesome_icon_set') ||
-              inherits(markerIcons, 'leaflet_awesome_icon')) {
-      if(inherits(markerIcons,'leaflet_awesome_icon_set')) {
-        libs <- unique(sapply(markerIcons,function(icon) icon$library))
-        map <- leaflet.extras::addAwesomeMarkersDependencies(map,libs)
+    } else if (inherits(markerIcons, "leaflet_awesome_icon_set") ||
+              inherits(markerIcons, "leaflet_awesome_icon")) {
+      if (inherits(markerIcons, "leaflet_awesome_icon_set")) {
+        libs <- unique(sapply(markerIcons, function(icon) icon$library))
+        map <- leaflet.extras::addAwesomeMarkersDependencies(map, libs)
       } else {
         map <- leaflet.extras::addAwesomeMarkersDependencies(
-          map,markerIcons$library)
+          map, markerIcons$library)
       }
       markerIconFunction <- awesomeIconFunction
     } else {
-      stop('markerIcons should be created using either leaflet::iconList() or leaflet::awesomeIconList()')
+      stop("markerIcons should be created using either leaflet::iconList() or leaflet::awesomeIconList()")
     }
   }
 
   leaflet::invokeMethod(
-    map, leaflet::getMapData(map), 'addEsriFeatureLayer', url, options, layerId, group,
+    map, leaflet::getMapData(map), "addEsriFeatureLayer", url, options, layerId, group,
     markerType, markerIcons,
     markerIconProperty, markerOptions, markerIconFunction,
     clusterOptions, clusterId,
@@ -217,5 +217,5 @@ addEsriHeatmapFeatureLayer <- function(
   )))
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriHeatmapFeatureLayer', url, layerId, group, options)
+    "addEsriHeatmapFeatureLayer", url, layerId, group, options)
 }

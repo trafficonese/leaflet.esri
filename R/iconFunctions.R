@@ -1,6 +1,6 @@
 defIconFunction <-
   JS("function(icon){
-       if(!$.isEmptyObject(icon)) {
+       if (!$.isEmptyObject(icon)) {
          return L.icon(icon);
        } else {
          return L.icon();
@@ -9,8 +9,8 @@ defIconFunction <-
 
 awesomeIconFunction <-
   JS("function(icon){
-       if(!$.isEmptyObject(icon)) {
-         if(!icon.prefix) {
+       if (!$.isEmptyObject(icon)) {
+         if (!icon.prefix) {
            icon.prefix = icon.library;
          }
          return L.AwesomeMarkers.icon(icon);

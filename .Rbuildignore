@@ -15,3 +15,6 @@
 ^\_pkgdown\.yaml$
 ^CONDUCT\.md$
 ^\.Rprofile\.local$
+^scripts
+^revdep
+^viztest

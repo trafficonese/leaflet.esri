@@ -1,7 +1,7 @@
 esriDependency <- function() {
   list(
     htmltools::htmlDependency(
-      "esri.leaflet",version = "1.0.4",
+      "esri.leaflet", version = "1.0.4",
       system.file("htmlwidgets/lib/esri", package = "leaflet.esri"),
       script = c("esri-leaflet.js", "esri-leaflet-bindings.js")
     )
@@ -20,7 +20,7 @@ addEsriDependency <- function(map) {
 esriClusterDependency <- function() {
   list(
     htmltools::htmlDependency(
-      "esri.leaflet.cluster",version = "1.0.2",
+      "esri.leaflet.cluster", version = "1.0.2",
       system.file("htmlwidgets/lib/esri-cluster", package = "leaflet.esri"),
       script = c("esri-leaflet-clustered-feature-layer-src.js")
     )
@@ -41,7 +41,7 @@ addEsriClusterDependency <- function(map) {
 esriGeocoderDependency <- function() {
   list(
     htmltools::htmlDependency(
-      "esri.leaflet.geocoder",version = "1.0.2",
+      "esri.leaflet.geocoder", version = "1.0.2",
       system.file("htmlwidgets/lib/esri-geocoder", package = "leaflet.esri"),
       script = c("esri-leaflet-geocoder.js"),
       stylesheet = c("esri-leaflet-geocoder.css")
@@ -62,7 +62,7 @@ addEsriGeocoderDependency <- function(map) {
 esriHeatmapDependency <- function() {
   list(
     htmltools::htmlDependency(
-      "esri.leaflet.heatmap",version = "1.0.2",
+      "esri.leaflet.heatmap", version = "1.0.2",
       system.file("htmlwidgets/lib/esri-heatmap", package = "leaflet.esri"),
       script = c("leaflet-heat.js",
                  "esri-leaflet-heatmap-feature-layer.js")
@@ -83,7 +83,7 @@ addEsriHeatmapDependency <- function(map) {
 esriRenderersDependency <- function() {
   list(
     htmltools::htmlDependency(
-      "esri.leaflet.renderers",version = "1.0.2",
+      "esri.leaflet.renderers", version = "1.0.2",
       system.file("htmlwidgets/lib/esri-renderers", package = "leaflet.esri"),
       script = c("esri-leaflet-renderers.js")
     )
