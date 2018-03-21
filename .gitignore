@@ -25,3 +25,4 @@ vignettes/*.pdf
 .Rproj.user
 .Rprofile.local
 docs
+viztest*
