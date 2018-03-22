@@ -35,7 +35,7 @@ leaflet() %>% setView(-99.88, 37.71, 4) %>%
             identifiedFeature = L.geoJson(featureCollection.features[0]).addTo(map);
             var soilDescription =
               featureCollection.features[0].properties[\"Dominant Order\"] +
-              " - " +
+              \" - \" +
               featureCollection.features[0].properties[\"Dominant Sub-Order\"];
             pane.innerHTML = soilDescription;
           }
