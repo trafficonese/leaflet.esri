@@ -1,4 +1,9 @@
-/* global LeafletWidget, $, L, Shiny, HTMLWidgets */
+/* global LeafletWidget, $, L, Shiny, HTMLWidgets, Esri */
+
+// Due to how esri is exported, it is saved to window.Esri.
+// It is then set to L.esri for further use.
+L.esri = window.Esri;
+
 LeafletWidget.methods.addEsriBasemapLayer = function(
   key, labelLayer, layerId, group, options) {
   this.layerManager.addLayer(

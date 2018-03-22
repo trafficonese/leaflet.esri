@@ -52,8 +52,8 @@ library_prod = function(name, filename = name, library = undefined) {
       path: build_path + "/" + foldername
     }
   }
-  if (name != "esri-leaflet") {
-    ret.externals["esri-leaflet"] = "esri-leaflet"
+  if (foldername != "esri-leaflet") {
+    ret.externals["esri-leaflet"] = "Esri";
   }
   if (typeof library != 'undefined') {
     ret.output.library = library
@@ -65,7 +65,8 @@ library_prod = function(name, filename = name, library = undefined) {
 const config = [
 
   // "esri-leaflet": "2.1.4",
-  library_prod("esri-leaflet", "esri-leaflet"),
+  // save to 'window.Esri' as the module is actually made properly
+  library_prod("esri-leaflet", "esri-leaflet", "Esri"),
 
   // "esri-leaflet-cluster": "2.0.0",
   library_prod("esri-leaflet-cluster", "esri-leaflet-cluster"),
