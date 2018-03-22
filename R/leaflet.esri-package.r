@@ -4,7 +4,6 @@
 #' This package allows a user to add 'ESRI' provided services such as
 #' 'MapService', 'ImageMapService', 'TiledMapService' etc. to a 'leaflet' map.
 #'
-#' @importFrom magrittr %>%
 #' @import leaflet
 #' @import leaflet.extras
 #'
