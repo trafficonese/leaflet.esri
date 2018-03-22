@@ -25,4 +25,6 @@ vignettes/*.pdf
 .Rproj.user
 .Rprofile.local
 docs
-viztest*
+viztest-
+node_modules/
+inst/htmlwidgets/build

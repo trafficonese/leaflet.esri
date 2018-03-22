@@ -19,3 +19,7 @@
 ^revdep
 ^viztest
 ^\.lintr$
+^node_modules
+^package-lock\.json$
+^package\.json$
+^webpack\.config\.js$
