@@ -157,6 +157,7 @@ LeafletWidget.methods.addEsriTiledMapLayer = function(
 LeafletWidget.methods.addEsriDynamicMapLayer = function(
   url, layerId, group, options, popupFunction, popupOptions ) {
 
+  var map = this;
   var layer = L.esri.dynamicMapLayer($.extend({url: url}, options || {}));
   // events
   // https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html#events
@@ -182,6 +183,7 @@ LeafletWidget.methods.addEsriDynamicMapLayer = function(
 LeafletWidget.methods.addEsriImageMapLayer = function(
   url, layerId, group, options, popupFunction, popupOptions ) {
 
+  var map = this;
   var layer = L.esri.imageMapLayer($.extend({url: url}, options || {}));
   // events
   // https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html#events
