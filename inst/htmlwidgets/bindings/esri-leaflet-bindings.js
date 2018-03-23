@@ -1,18 +1,15 @@
-/* global LeafletWidget, $, L, Shiny, HTMLWidgets, Esri */
-
-// Due to how esri is exported, it is saved to window.Esri.
-// It is then set to L.esri for further use.
-L.esri = window.Esri;
+/* global LeafletWidget, $, L, Shiny, HTMLWidgets */
 
 LeafletWidget.methods.addEsriBasemapLayer = function(
-  key, labelLayer, layerId, group, options) {
+  key, labelLayer, layerId, group, options
+) {
   this.layerManager.addLayer(
     L.esri.basemapLayer(key, options),
-    "tile", layerId, group);
+    'tile', layerId, group);
   if(labelLayer) {
     this.layerManager.addLayer(
       L.esri.basemapLayer(labelLayer, options),
-      "tile", layerId, group);
+      'tile', layerId, group);
   }
 };
 
@@ -24,7 +21,7 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
   clusterOptions, clusterId,
   labelProperty, labelOptions, popupProperty, popupOptions,
   pathOptions, highlightOptions, fitBounds
-  ) {
+) {
   var map = this;
   LeafletWidget.methods.addGenericGeoJSONLayer(
     map,
@@ -73,7 +70,7 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
           {'feature': e.feature});
       });
       if(fitBounds) {
-        featureLayer.once("load", function(evt) {
+        featureLayer.once('load', function(evt) {
           // create a new empty Leaflet bounds object
           var bounds = L.latLngBounds([]);
           // loop through the features returned by the server
@@ -138,6 +135,7 @@ LeafletWidget.methods.addEsriHeatmapFeatureLayer = function(
 LeafletWidget.methods.addEsriTiledMapLayer = function(
   url, layerId, group, options ) {
 
+  var map = this;
   var layer =  L.esri.tiledMapLayer($.extend({url: url}, options || {}));
   // events
   // https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html#events
@@ -153,7 +151,7 @@ LeafletWidget.methods.addEsriTiledMapLayer = function(
       {'bounds': e.bounds});
   });
 
-  this.layerManager.addLayer(layer, "tile", layerId, group);
+  this.layerManager.addLayer(layer, 'tile', layerId, group);
 };
 
 LeafletWidget.methods.addEsriDynamicMapLayer = function(
@@ -178,7 +176,7 @@ LeafletWidget.methods.addEsriDynamicMapLayer = function(
     layer.bindPopup(popupFunction, popupOptions || {});
   }
 
-  this.layerManager.addLayer(layer, "tile", layerId, group);
+  this.layerManager.addLayer(layer, 'tile', layerId, group);
 };
 
 LeafletWidget.methods.addEsriImageMapLayer = function(
@@ -203,5 +201,5 @@ LeafletWidget.methods.addEsriImageMapLayer = function(
     layer.bindPopup(popupFunction, popupOptions || {});
   }
 
-  this.layerManager.addLayer(layer, "tile", layerId, group);
+  this.layerManager.addLayer(layer, 'tile', layerId, group);
 };
