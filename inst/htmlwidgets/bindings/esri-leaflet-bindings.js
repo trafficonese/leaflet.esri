@@ -74,7 +74,7 @@ LeafletWidget.methods.addEsriFeatureLayer = function(
           // create a new empty Leaflet bounds object
           var bounds = L.latLngBounds([]);
           // loop through the features returned by the server
-          fl.eachFeature(function(layer) {
+          featureLayer.eachFeature(function(layer) {
             // get the bounds of an individual feature
             var layerBounds = layer.getBounds();
             // extend the bounds of the collection to fit the bounds of the new feature
