@@ -23,3 +23,5 @@
 ^package-lock\.json$
 ^package\.json$
 ^webpack\.config\.js$
+^revdep
+^inst/htmlwidgets/bindings
