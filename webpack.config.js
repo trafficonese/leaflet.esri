@@ -14,7 +14,7 @@ library_module = function(name) {
           {
             loader: 'file-loader',
             options: {
-              name: "css/" + name + ".[ext]"
+              name: "css/[name].[ext]"
             }
           }
         ]
