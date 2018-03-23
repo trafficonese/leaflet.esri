@@ -80,6 +80,16 @@ imageMapLayerOptions <- function(
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
 #' @export
+#' @examples
+#' leaflet() %>%
+#'   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
+#'   setView(30, 0, 3) %>%
+#'   addEsriImageMapLayer(
+#'     url = "https://sampleserver3.arcgisonline.com/ArcGIS/rest/services/World/MODIS/ImageServer",
+#'     options = imageMapLayerOptions(useCors = FALSE))
+#'
+#' ## for more examples see
+#' # browseURL(system.file("examples/imageMapLayers.R", package = "leaflet.esri"))
 addEsriImageMapLayer <- function(
   map, url,
   options = imageMapLayerOptions(),

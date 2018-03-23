@@ -35,10 +35,9 @@ esriBasemapLabels <- list(
 #' @param layerId Unique ID for the layer
 #' @param group The group this layer belongs to.
 #' @param options Basemap Layer Options. You can pass \code{\link[leaflet]{tileOptions}()}.
-#' @examples \dontrun{
+#' @examples
 #' leaflet() %>%
 #'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels = TRUE)
-#' }
 #' @export
 addEsriBasemapLayer <- function(
   map, key, autoLabels = FALSE,

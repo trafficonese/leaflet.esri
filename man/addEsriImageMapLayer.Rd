@@ -30,3 +30,14 @@ Your function will be passed a GeoJSON FeatureCollection of the features
 \description{
 Image Services provide access to raster data through a web service.
 }
+\examples{
+leaflet() \%>\%
+  addEsriBasemapLayer(esriBasemapLayers$Gray) \%>\%
+  setView(30, 0, 3) \%>\%
+  addEsriImageMapLayer(
+    url = "https://sampleserver3.arcgisonline.com/ArcGIS/rest/services/World/MODIS/ImageServer",
+    options = imageMapLayerOptions(useCors = FALSE))
+
+## for more examples see
+# browseURL(system.file("examples/imageMapLayers.R", package = "leaflet.esri"))
+}
