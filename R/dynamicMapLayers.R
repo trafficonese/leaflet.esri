@@ -84,7 +84,9 @@ dynamicMapLayerOptions <- function(
 #' leaflet() %>% setView(-96.8, 38.5, 4) %>%
 #'   addEsriBasemapLayer(esriBasemapLayers$Gray, autoLabels = TRUE) %>%
 #'   addEsriDynamicMapLayer(
-#'     url = "https://maps7.arcgisonline.com/arcgis/rest/services/USDA_USFS_2014_Wildfire_Hazard_Potential/MapServer", popupFunction = popupFunc,
+#'     url = paste0("https://maps7.arcgisonline.com/arcgis/rest/services/",
+#'                  "USDA_USFS_2014_Wildfire_Hazard_Potential/MapServer"),
+#'     popupFunction = popupFunc,
 #'     options = dynamicMapLayerOptions(useCors = FALSE))
 #'
 #' ## for more examples see
