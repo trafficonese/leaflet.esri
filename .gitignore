@@ -27,7 +27,6 @@ vignettes/*.pdf
 docs
 viztest-
 node_modules/
-inst/htmlwidgets/build
 revdep/checks*
 revdep/library*
 revdep/data*
