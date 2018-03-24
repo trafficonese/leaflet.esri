@@ -94,10 +94,9 @@ let library_binding = function(name) {
     // save bindings to build bindings folder
     output: {
       filename: name + "-bindings.js", // save file in path on next line
-      path: build_path + "/bindings" // save all files in this path
+      path: build_path + "/" + name // save all files in this path
     }
   }
-
 }
 
 

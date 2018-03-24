@@ -9,37 +9,26 @@ html_dependency <- function(name, version, script, folder, ...) {
 }
 
 # match the npm version
-html_dep_prod <- function(name, version, has_style = FALSE, ..., stylesheet = NULL) {
+html_dep_prod <- function(name, version, has_style = FALSE, has_binding = FALSE, ..., stylesheet = NULL) {
   if (isTRUE(has_style)) {
     if (missing(stylesheet)) {
       stylesheet <- paste0(name, "-prod.css")
     }
   }
+
+  script <- paste0(name, "-prod.js")
+  if (isTRUE(has_binding)) {
+    script <- c(script, paste0(name, "-bindings.js"))
+  }
   html_dependency(
     name, version,
-    paste0(name, "-prod.js"),
+    script,
     file.path("htmlwidgets", "build", name),
     all_files = TRUE,
     ...,
     stylesheet = stylesheet
   )
 }
-
-# keep the version at the lastest release version where the bindings were updated
-html_dep_binding <- function(name, version, ..., attachment = NULL) {
-  html_dependency(
-    paste0(name, "-bindings"), version,
-    paste0(name, "-bindings.js"),
-    file.path("htmlwidgets", "build", "bindings"),
-    all_files = FALSE,
-    ...,
-    attachment = c(
-      attachment,
-      paste0(name, "-bindings.js.map")
-    )
-  )
-}
-
 
 
 
@@ -48,8 +37,7 @@ html_dep_binding <- function(name, version, ..., attachment = NULL) {
 esriDependency <- function() {
   list(
     # // "esri-leaflet": "2.1.4",
-    html_dep_prod("esri-leaflet", "2.1.4"),
-    html_dep_binding("esri-leaflet", "1.0.0")
+    html_dep_prod("esri-leaflet", "2.1.4", has_binding = TRUE)
   )
 }
 
@@ -67,8 +55,7 @@ esriClusterDependency <- function() {
     # // "leaflet.markercluster": "1.3.0",
     html_dep_prod("leaflet-markercluster", "1.3.0"),
     # // "esri-leaflet-cluster": "2.0.0",
-    html_dep_prod("esri-leaflet-cluster", "2.0.0"),
-    html_dep_binding("esri-leaflet-cluster", "1.0.0")
+    html_dep_prod("esri-leaflet-cluster", "2.0.0", has_binding = TRUE)
   )
 }
 
@@ -107,8 +94,7 @@ esriHeatmapDependency <- function() {
     # // "leaflet.heat": "0.2.0",
     html_dep_prod("leaflet-heat", "0.2.0"),
     # // "esri-leaflet-heatmap": "2.0.0",
-    html_dep_prod("esri-leaflet-heatmap", "2.0.0"),
-    html_dep_binding("esri-leaflet-heatmap", "1.0.0")
+    html_dep_prod("esri-leaflet-heatmap", "2.0.0", has_binding = TRUE)
   )
 }
 
