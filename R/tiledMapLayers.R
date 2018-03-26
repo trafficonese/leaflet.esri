@@ -35,6 +35,13 @@ tiledMapLayerOptions <- function(
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
 #' @export
+#' @examples
+#' leaflet() %>% setView(-81.47, 30.70, 12) %>%
+#'   addEsriTiledMapLayer(
+#'     url = "https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer")
+#'
+#' ## for more examples see
+#' # browseURL(system.file("examples/tiledMapLayers.R", package = "leaflet.esri"))
 addEsriTiledMapLayer <- function(
   map, url,
   options = tiledMapLayerOptions(),

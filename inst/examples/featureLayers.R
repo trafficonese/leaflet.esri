@@ -33,10 +33,10 @@ Bus Direction
 <select id="direction">
 <!-- make sure to encase string values in single quotes for valid sql -->
 <option value=\"1=1\">Any</option>
-<option value="direction=\"North\"">North</option>
-<option value="direction=\"South\"">South</option>
-<option value="direction=\"East\"">East</option>
-<option value="direction=\"West\"">West</option>
+<option value="direction=\'North\'">North</option>
+<option value="direction=\'South\'">South</option>
+<option value="direction=\'East\'">East</option>
+<option value="direction=\'West\'">West</option>
 </select>
 </label>
 </div>'
@@ -75,7 +75,7 @@ leaflet() %>%
     markerOptions = markerOptions(opacity = 0.8, riseOnHover = TRUE),
     markerIcons = busIcons,
     clusterOptions = markerClusterOptions()
-    )
+  )
 
 #' ### Example 4 & 5
 #' Here we generate a heat map first with default options and next with customized colors.<br/><br/>

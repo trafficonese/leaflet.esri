@@ -1,6 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^NEWS\.md$
 ^README\.Rmd$
 ^README\.md$
 ^README-.*\.png$
@@ -18,3 +17,10 @@
 ^scripts
 ^revdep
 ^viztest
+^\.lintr$
+^node_modules
+^package-lock\.json$
+^package\.json$
+^webpack\.config\.js$
+^revdep
+^inst/htmlwidgets/bindings

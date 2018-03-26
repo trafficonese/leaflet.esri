@@ -1,3 +1,10 @@
+# leaflet.esri 1.0.0
+
+## Leaflet.js 1.x
+
+- Uses package leaflet.js v1.3.1 by way of the `leaflet` R package
+- All javascript dependencies have been updated to the latest stable release
+
 # leaflet.esri 0.2
 
 ## Major changes

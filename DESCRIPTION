@@ -1,7 +1,7 @@
 Package: leaflet.esri
 Type: Package
 Title: 'ESRI' Bindings for the 'leaflet' Package
-Version: 0.2.9000
+Version: 1.0.0
 Authors@R: c(
       person("Bhaskar", "Karambelkar", email = "bhaskarvk@gmail.com", role = c("aut", "cre")),
       person("Barret", "Schloerke", email = "barret@rstudio.com", role = c("ctb"))
@@ -11,27 +11,15 @@ License: GPL-3 | file LICENSE
 Depends:
     R (>= 3.1.0),
     leaflet (>= 2.0.0),
-    leaflet.extras (> 0.2.0)
+    leaflet.extras (>= 1.0.0)
 Remotes:
     schloerke/leaflet@barret/v1x,
     schloerke/leaflet.extras@v1x
 Encoding: UTF-8
 LazyData: true
 Imports:
-    shiny,
     htmlwidgets,
-    htmltools,
-    magrittr
-Suggests:
-    V8,
-    dplyr,
-    geojsonio,
-    purrr,
-    readr,
-    stringr,
-    rmapshaper,
-    htmlTable,
-    memoise
+    htmltools
 URL: https://github.com/bhaskarvk/leaflet.esri,https://bhaskarvk.github.io/leaflet.esri/
 BugReports: https://github.com/bhaskarvk/leaflet.esri/issues
 RoxygenNote: 6.0.1

@@ -11,45 +11,45 @@ featureLayerOptions(where = NULL, minZoom = NULL, maxZoom = NULL,
   renderer = NULL, ...)
 }
 \arguments{
-\item{where}{String    An optional expression to filter features server side.
-String values should be denoted using single quotes ie: where: "FIELDNAME = 'field value'"; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.}
+\item{where}{String An optional expression to filter features server side.
+String values should be denoted using single quotes ie: where: "FIELDNAME = "field value""; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.}
 
-\item{minZoom}{Integer    Minimum zoom level of the map that features will display.
+\item{minZoom}{Integer Minimum zoom level of the map that features will display.
 example: minZoom:0}
 
-\item{maxZoom}{Integer    Maximum zoom level of the map that features will
+\item{maxZoom}{Integer Maximum zoom level of the map that features will
 example: maxZoom:19}
 
-\item{cacheLayers}{Boolean    Will remove layers from the internal cache when they are removed from the map.}
+\item{cacheLayers}{Boolean Will remove layers from the internal cache when they are removed from the map.}
 
-\item{fields}{Array    An array of fieldnames to pull from the service.
-Includes all fields by default. You should always specify the name of the unique id for the service. Usually either 'FID' or 'OBJECTID'.}
+\item{fields}{Array An array of fieldnames to pull from the service.
+Includes all fields by default. You should always specify the name of the unique id for the service. Usually either "FID" or "OBJECTID".}
 
-\item{from}{Date    When paired with to defines the time range of features to display.
+\item{from}{Date When paired with to defines the time range of features to display.
 Requires the Feature Layer to be time enabled.}
 
-\item{to}{Date    When paired with from defines the time range of features to display.
+\item{to}{Date When paired with from defines the time range of features to display.
 Requires the Feature Layer to be time enabled.}
 
-\item{timeField}{false    The name of the field to lookup the time of the feature.
-Can be an object like {start:'startTime', end:'endTime'} or a string like 'created'.}
+\item{timeField}{false The name of the field to lookup the time of the feature.
+Can be an object like {start:"startTime", end:"endTime"} or a string like "created".}
 
-\item{timeFilterMode}{'server' (default) or 'client'    Determines where features are filtered by time.
-By default features will be filtered by the server. If set to 'client' all features are requested and filtered by the app before display.}
+\item{timeFilterMode}{"server" (default) or "client" Determines where features are filtered by time.
+By default features will be filtered by the server. If set to "client" all features are requested and filtered by the app before display.}
 
-\item{simplifyFactor}{Integer    How much to simplify polygons and polylines.
+\item{simplifyFactor}{Integer How much to simplify polygons and polylines.
 More means better performance, and less means more accurate representation.}
 
-\item{precision}{Integer    How many digits of precision to request from the server.
+\item{precision}{Integer How many digits of precision to request from the server.
 Wikipedia has a great reference of digit precision to meters at \url{http://en.wikipedia.org/wiki/Decimal_degrees}.}
 
-\item{token}{String    If you pass a token in your options it will be included in all requests to the service.}
+\item{token}{String If you pass a token in your options it will be included in all requests to the service.}
 
 \item{proxy}{URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.}
 
-\item{useCors}{Boolean    If this service should use CORS when making GET requests.}
+\item{useCors}{Boolean If this service should use CORS when making GET requests.}
 
-\item{renderer}{L.svg or L.canvas    The vector renderer to use to draw the service.
+\item{renderer}{L.svg or L.canvas The vector renderer to use to draw the service.
 Usually L.svg but setting to L.canvas contains performance benefits for large polygon layers.}
 
 \item{...}{extra options}
