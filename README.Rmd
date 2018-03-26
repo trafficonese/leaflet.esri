@@ -25,10 +25,8 @@ The chart below shows more details.
 
 | Leaflet JS ver. | R Leaflet pkg ver. | esri-leaflet JS Plugin ver. | R leaflet.esri pkg ver.|
 | --------------- | ------------------ | --------------------------- | -------------------- |
-| [0.7.x](https://github.com/Leaflet/Leaflet/releases/tag/v0.7.7) | [1.1](https://github.com/rstudio/leaflet) | [1.0.4](https://github.com/Esri/esri-leaflet/releases/tag/v1.0.4) | 0.2.x |
-| [1.x](https://github.com/Leaflet/Leaflet/releases/tag/v1.0.1) | ? <sup>1</sup> | [2.x](https://github.com/Esri/esri-leaflet/releases/tag/v2.0.4) | ? |
-
-1 - The R package has not yet been proted to Leaflet JS 1.x
+| [0.7.x](https://github.com/Leaflet/Leaflet/releases/tag/v0.7.7) | [1.1](https://github.com/rstudio/leaflet/releases/tag/v1.1.0) | [1.0.4](https://github.com/Esri/esri-leaflet/releases/tag/v1.0.4) | 0.2.x |
+| [1.3.1](https://github.com/Leaflet/Leaflet/releases/tag/v1.3.1) | [2.0.0](https://github.com/rstudio/leaflet/releases/tag/v2.0.0) | [2.1.4](https://github.com/Esri/esri-leaflet/releases/tag/v2.1.4) | 1.0.0 |
 
 ### Features Tracking
 
@@ -91,4 +89,3 @@ Tasks are wrappers for commonly used API methods on ArcGIS services. They expose
 
 ### Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
-
