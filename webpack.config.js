@@ -5,70 +5,61 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const binding_path = "./inst/htmlwidgets/bindings/";
 const build_path = path.resolve(__dirname, "./inst/htmlwidgets/build");
 
-let library_module = function(name) {
-  return {
-    rules: [
-      {
-        test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: "css/[name].[ext]"
-            }
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader"
-        ]
-      }
-    ]
-  }
-}
-
-
 let library_prod = function(
   name,
   filename = name,
   library = undefined,
   use_default = true
 ) {
-  let foldername = filename;
-  filename = filename + "-prod";
 
+  let foldername = filename;
+  filename = filename + "-prod"
   var ret = {
-    mode: "development",
+    mode: "production", // minify the files
     entry: name,
-    devtool: "source-map", // create sibling map file
+    devtool: "source-map", // produce a sibling source map file
     externals: {
+      // if 'leaflet' is required, pull from window.L
       leaflet: "L",
     },
-    module: library_module(filename),
+    module: {
+      rules: [
+        // copy files to destination folder who have these extensions
+        { test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/,
+          use: [{
+              loader: 'file-loader',
+              options: {
+                name: "css/[name].[ext]"}}]},
+        // copy from https://github.com/webpack-contrib/mini-css-extract-plugin/tree/e307e251a476e24f3d1827e74e0434de52ce6ea3
+        { test: /\.css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader" ]}
+      ]
+    },
     plugins: [
+      // copy from https://github.com/webpack-contrib/mini-css-extract-plugin/tree/e307e251a476e24f3d1827e74e0434de52ce6ea3
       new MiniCssExtractPlugin({
         filename: filename + ".css"
       })
     ],
     output: {
-      filename: filename + ".js", // save file in path on next line
-      path: build_path + "/" + foldername // save all files in this path
+      // save to this javascript file
+      filename: filename + ".js",
+      // save all files in this folder
+      path: build_path + "/" + foldername
     }
-  }
-  // if it isn't esri, add the external dependency
-  if (foldername != "esri-leaflet") {
-    ret.externals["esri-leaflet"] = "L.esri";
   }
   // if saving the module to something...
   if (typeof library != 'undefined') {
+    // save the library as a variable
     // https://webpack.js.org/configuration/output/#output-library
     ret.output.library = library;
+    // do not use 'var' in the assignment
     // https://webpack.js.org/configuration/output/#output-librarytarget
     ret.output.libraryTarget = "assign";
     if (use_default) {
+      // export the default value of the module
       // https://webpack.js.org/configuration/output/#output-libraryexport
       ret.output.libraryExport = "default";
     }
@@ -84,6 +75,7 @@ let library_binding = function(name) {
     entry: filename,
     module: {
       rules: [
+        // lint the bindings using ./inst/htmlwidgets/bindings/.eslintrc.js
         {
           test: /\.js$/,
           exclude: /node_modules/,
