@@ -4,7 +4,11 @@ Title: 'ESRI' Bindings for the 'leaflet' Package
 Version: 1.0.0
 Authors@R: c(
       person("Bhaskar", "Karambelkar", email = "bhaskarvk@gmail.com", role = c("aut", "cre")),
-      person("Barret", "Schloerke", email = "barret@rstudio.com", role = c("ctb"))
+      person("Barret", "Schloerke", email = "barret@rstudio.com", role = c("aut")),
+      person("Patrick", "Arlt", role = c("ctb", "cph"), comment = "esri-leaflet, esri-leaflet-cluster, esri-leaflet-geocoder, and esri-leaflet-heatmap libraries"),
+      person("Rachel", "Nehmer", role = c("ctb", "cph"), comment = "esri-leaflet-renderers library"),
+      person("Vladimir", "Agafonkin", role = c("ctb", "cph"), comment = "leaflet.heat and simpleheat libraries"),
+      person(family = "Leaflet", role = c("ctb", "cph"), comment = "leaflet.markercluster library")
     )
 Description: An add-on package to the 'leaflet' package, which provides bindings for 'ESRI' services. This package allows a user to add 'ESRI' provided services such as 'MapService', 'ImageMapService', 'TiledMapService' etc. to a 'leaflet' map.
 License: GPL-3 | file LICENSE
