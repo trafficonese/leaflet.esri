@@ -86,8 +86,7 @@ dynamicMapLayerOptions <- function(
 #'   addEsriDynamicMapLayer(
 #'     url = paste0("https://maps7.arcgisonline.com/arcgis/rest/services/",
 #'                  "USDA_USFS_2014_Wildfire_Hazard_Potential/MapServer"),
-#'     popupFunction = popupFunc,
-#'     options = dynamicMapLayerOptions(useCors = FALSE))
+#'     popupFunction = popupFunc)
 #'
 #' ## for more examples see
 #' # browseURL(system.file("examples/dynamicMapLayers.R", package = "leaflet.esri"))

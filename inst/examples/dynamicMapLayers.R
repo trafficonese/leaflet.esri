@@ -15,8 +15,7 @@ leaflet() %>% setView(-99.88, 37.71, 4) %>%
     layerId = "selectedFeatures", position = "bottomleft") %>%
   addEsriDynamicMapLayer(
     url = "https://services.arcgisonline.com/arcgis/rest/services/Specialty/Soil_Survey_Map/MapServer",
-    layerId = "soil",
-    options = dynamicMapLayerOptions(useCors = FALSE)) %>%
+    layerId = "soil") %>%
   htmlwidgets::onRender(htmlwidgets::JS(
     "function(el, x, data) {
       var map = this;
@@ -62,5 +61,4 @@ popupFunc <- htmlwidgets::JS(
 leaflet() %>% setView(-96.8, 38.5, 4) %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray, autoLabels = TRUE) %>%
   addEsriDynamicMapLayer(
-    url = "https://maps7.arcgisonline.com/arcgis/rest/services/USDA_USFS_2014_Wildfire_Hazard_Potential/MapServer", popupFunction = popupFunc,
-    options = dynamicMapLayerOptions(useCors = FALSE))
+    url = "https://maps7.arcgisonline.com/arcgis/rest/services/USDA_USFS_2014_Wildfire_Hazard_Potential/MapServer", popupFunction = popupFunc)

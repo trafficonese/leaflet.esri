@@ -6,6 +6,8 @@
 library(leaflet.esri)
 
 #' ### Examples 1 & 2
+#' Simple examples. In Example 1 we need to disable CORS as the ArcGIS ver. is old and doesn't support cors.<br/><br/>
+
 
 leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
@@ -20,8 +22,7 @@ leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Gray) %>%
   setView(-96.8, 38.5, 4) %>%
   addEsriImageMapLayer(
-    url = "https://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/ImageServer",
-    options = imageMapLayerOptions(useCors = FALSE))
+    url = "https://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/ImageServer")
 
 #' ### Example 3
 #' Custom band Ids for infrared image layer.<br/><br/>

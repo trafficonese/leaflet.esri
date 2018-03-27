@@ -32,11 +32,11 @@ Image Services provide access to raster data through a web service.
 }
 \examples{
 leaflet() \%>\%
-  addEsriBasemapLayer(esriBasemapLayers$Gray) \%>\%
-  setView(30, 0, 3) \%>\%
+  addEsriBasemapLayer(esriBasemapLayers$Imagery) \%>\%
+  setView(-120.23, 43.5, 5)  \%>\%
   addEsriImageMapLayer(
-    url = "https://sampleserver3.arcgisonline.com/ArcGIS/rest/services/World/MODIS/ImageServer",
-    options = imageMapLayerOptions(useCors = FALSE))
+    url = "http://imagery.oregonexplorer.info/arcgis/rest/services/NAIP_2011/NAIP_2011_Dynamic/ImageServer",
+    options = imageMapLayerOptions(bandIds = c(3, 0, 1)))
 
 ## for more examples see
 # browseURL(system.file("examples/imageMapLayers.R", package = "leaflet.esri"))
