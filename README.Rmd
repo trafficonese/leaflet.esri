@@ -1,5 +1,7 @@
 ---
-output: github_document
+  output:
+    github_document:
+      html_preview: false
 ---
 
 ```{r, echo = FALSE}
@@ -56,8 +58,8 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 - [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html) ✔️
 - [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html) ✔️
 - [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html) ✔️
-- ~~[Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)~~ Cannot be supported for now as this requires leaflet 1.x.
-- [~~Vector Layer~~](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html) Cannot be supported for now as this requires leaflet 1.x.
+- [Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)
+- [Vector Layer](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html)
 
 #### Controls
 
