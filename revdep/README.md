@@ -9,7 +9,7 @@
 |language |(EN)                         |
 |collate  |en_US.UTF-8                  |
 |tz       |America/Los_Angeles          |
-|date     |2018-03-26                   |
+|date     |2018-03-29                   |
 
 # Dependencies
 
@@ -57,7 +57,7 @@
 |stringr        |1.3.0   |1.3.0   |   |
 |tibble         |1.4.2   |1.4.2   |   |
 |utf8           |1.1.3   |1.1.3   |   |
-|viridis        |0.5.0   |0.5.0   |   |
+|viridis        |0.5.1   |0.5.1   |   |
 |viridisLite    |0.3.0   |0.3.0   |   |
 |xtable         |1.8-2   |1.8-2   |   |
 |yaml           |2.1.18  |2.1.18  |   |

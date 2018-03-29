@@ -1,3 +1,8 @@
+This submission is in conjunction with the `leaflet` package submission.
+
+- Bhaskar
+
+
 ## Test environments
 * local OS X install, R 3.4.4
 * ubuntu 12.04 (on travis-ci), R version 3.4.4 (2017-01-27)
