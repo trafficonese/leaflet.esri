@@ -4,28 +4,28 @@
 #' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html}.
 #' @export
 esriBasemapLayers <- list(
-  'Streets' = 'Streets',
-  'Topographic' = 'Topographic',
-  'NationalGeographic' = 'NationalGeographic',
-  'Oceans' = 'Oceans',
-  'Gray' = 'Gray',
-  'DarkGray' = 'DarkGray',
-  'Imagery' = 'Imagery',
-  'ShadedRelief' = 'ShadedRelief',
-  'Terrain' = 'Terrain')
+  "Streets" = "Streets",
+  "Topographic" = "Topographic",
+  "NationalGeographic" = "NationalGeographic",
+  "Oceans" = "Oceans",
+  "Gray" = "Gray",
+  "DarkGray" = "DarkGray",
+  "Imagery" = "Imagery",
+  "ShadedRelief" = "ShadedRelief",
+  "Terrain" = "Terrain")
 
 #' Esri basemap labels.
 #'
 #' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels}.
 #' @export
 esriBasemapLabels <- list(
-  'OceansLabels' = 'OceansLabels',
-  'GrayLabels' = 'GrayLabels',
-  'DarkGrayLabels' = 'DarkGrayLabels',
-  'ImageryLabels' = 'ImageryLabels',
-  'ImageryTransportation' = 'ImageryTransportation',
-  'ShadedReliefLabels' = 'ShadedReliefLabels',
-  'TerrainLabels' = 'TerrainLabels'
+  "OceansLabels" = "OceansLabels",
+  "GrayLabels" = "GrayLabels",
+  "DarkGrayLabels" = "DarkGrayLabels",
+  "ImageryLabels" = "ImageryLabels",
+  "ImageryTransportation" = "ImageryTransportation",
+  "ShadedReliefLabels" = "ShadedReliefLabels",
+  "TerrainLabels" = "TerrainLabels"
 )
 
 #' Adds a ArcGIS Basemap layer
@@ -35,10 +35,9 @@ esriBasemapLabels <- list(
 #' @param layerId Unique ID for the layer
 #' @param group The group this layer belongs to.
 #' @param options Basemap Layer Options. You can pass \code{\link[leaflet]{tileOptions}()}.
-#' @examples \dontrun{
+#' @examples
 #' leaflet() %>%
-#'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)
-#' }
+#'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels = TRUE)
 #' @export
 addEsriBasemapLayer <- function(
   map, key, autoLabels = FALSE,
@@ -47,21 +46,21 @@ addEsriBasemapLayer <- function(
 
   map <- addEsriDependency(map)
 
-  if(is.null(options)) {
+  if (is.null(options)) {
     options <- list()
   }
 
-  if(!(key %in% esriBasemapLayers || key %in% esriBasemapLabels)) {
+  if (!(key %in% esriBasemapLayers || key %in% esriBasemapLabels)) {
     stop("Invalid Basemap layer Key")
   }
 
   labelLayer <- NULL
-  if(autoLabels) {
-    labelLayer <- esriBasemapLabels[[sprintf("%sLabels",key)]]
+  if (autoLabels) {
+    labelLayer <- esriBasemapLabels[[sprintf("%sLabels", key)]]
   }
 
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriBasemapLayer', key, labelLayer, layerId, group, options)
+    "addEsriBasemapLayer", key, labelLayer, layerId, group, options)
 
 }

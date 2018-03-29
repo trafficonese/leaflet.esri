@@ -2,10 +2,10 @@
 #' Options for TiledMapLayer.
 #'
 #' @param correctZoomLevels Correct Zoom levels.
-#' @param zoomOffsetAllowance	If correctZoomLevels is enabled this controls the amount of tolerance for the difference at each scale level for remapping tile levels.
-#' @param proxy	URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
-#' @param useCors	Dictates if the service should use CORS when making GET requests.
-#' @param token	Use this token to authenticate all calls to the service.
+#' @param zoomOffsetAllowance If correctZoomLevels is enabled this controls the amount of tolerance for the difference at each scale level for remapping tile levels.
+#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param useCors Dictates if the service should use CORS when making GET requests.
+#' @param token Use this token to authenticate all calls to the service.
 #' @param tileOptions Other options for tile layer. You can pass \code{\link[leaflet]{tileOptions}()}.
 #' @export
 tiledMapLayerOptions <- function(
@@ -22,7 +22,7 @@ tiledMapLayerOptions <- function(
     proxy = proxy,
     useCors = useCors,
     token = token
-  ),tileOptions))
+  ), tileOptions))
 }
 
 #' Access tiles from ArcGIS Online and ArcGIS Server to visualize and identify features.
@@ -35,16 +35,23 @@ tiledMapLayerOptions <- function(
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
 #' @export
+#' @examples
+#' leaflet() %>% setView(-81.47, 30.70, 12) %>%
+#'   addEsriTiledMapLayer(
+#'     url = "https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer")
+#'
+#' ## for more examples see
+#' # browseURL(system.file("examples/tiledMapLayers.R", package = "leaflet.esri"))
 addEsriTiledMapLayer <- function(
   map, url,
   options = tiledMapLayerOptions(),
   layerId = NULL, group = NULL) {
 
   map <- addEsriDependency(map)
-  if(is.null(options)) {
+  if (is.null(options)) {
     options <- list()
   }
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriTiledMapLayer', url, layerId, group, options)
+    "addEsriTiledMapLayer", url, layerId, group, options)
 }

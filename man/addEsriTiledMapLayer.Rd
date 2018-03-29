@@ -22,3 +22,11 @@ addEsriTiledMapLayer(map, url, options = tiledMapLayerOptions(),
 If you have published a Feature Service in ArcGIS Online, it can be used to create a static set of tiles as well. You can find details about that process in the \href{http://doc.arcgis.com/en/arcgis-online/share-maps/publish-tiles.htm#ESRI_SECTION1_F68FCBD33BD54117B23232D41A762E89}{ArcGIS Online Help}.
 Your map service must be published using the Web Mercator Auxiliary Sphere tiling scheme (WKID 102100/3857) and the default scale options used by Google Maps, Bing Maps and \href{http://resources.arcgis.com/en/help/arcgisonline-content/index.html#//011q00000002000000}{ArcGIS Online}. Esri Leaflet will not support any other spatial reference for tile layers.
 }
+\examples{
+leaflet() \%>\% setView(-81.47, 30.70, 12) \%>\%
+  addEsriTiledMapLayer(
+    url = "https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer")
+
+## for more examples see
+# browseURL(system.file("examples/tiledMapLayers.R", package = "leaflet.esri"))
+}

@@ -24,4 +24,8 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 .Rprofile.local
-docs
+viztest-*
+node_modules/
+revdep/checks*
+revdep/library*
+revdep/data*

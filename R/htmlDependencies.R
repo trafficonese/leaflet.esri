@@ -1,10 +1,43 @@
+html_dependency <- function(name, version, script, folder, ...) {
+  htmltools::htmlDependency(
+    name,
+    version = version,
+    system.file(folder, package = "leaflet.esri"),
+    script = script,
+    ...
+  )
+}
+
+# match the npm version
+html_dep_prod <- function(name, version, has_style = FALSE, has_binding = FALSE, ..., stylesheet = NULL) {
+  if (isTRUE(has_style)) {
+    if (missing(stylesheet)) {
+      stylesheet <- paste0(name, "-prod.css")
+    }
+  }
+
+  script <- paste0(name, "-prod.js")
+  if (isTRUE(has_binding)) {
+    script <- c(script, paste0(name, "-bindings.js"))
+  }
+  html_dependency(
+    name, version,
+    script,
+    file.path("htmlwidgets", "build", name),
+    all_files = TRUE,
+    ...,
+    stylesheet = stylesheet
+  )
+}
+
+
+
+
+
 esriDependency <- function() {
   list(
-    htmltools::htmlDependency(
-      "esri.leaflet",version = "1.0.4",
-      system.file("htmlwidgets/lib/esri", package = "leaflet.esri"),
-      script = c("esri-leaflet.js", "esri-leaflet-bindings.js")
-    )
+    # // "esri-leaflet": "2.1.4",
+    html_dep_prod("esri-leaflet", "2.1.4", has_binding = TRUE)
   )
 }
 
@@ -19,11 +52,10 @@ addEsriDependency <- function(map) {
 
 esriClusterDependency <- function() {
   list(
-    htmltools::htmlDependency(
-      "esri.leaflet.cluster",version = "1.0.2",
-      system.file("htmlwidgets/lib/esri-cluster", package = "leaflet.esri"),
-      script = c("esri-leaflet-clustered-feature-layer-src.js")
-    )
+    # // "leaflet.markercluster": "1.3.0",
+    html_dep_prod("leaflet-markercluster", "1.3.0"),
+    # // "esri-leaflet-cluster": "2.0.0",
+    html_dep_prod("esri-leaflet-cluster", "2.0.0", has_binding = TRUE)
   )
 }
 
@@ -40,12 +72,8 @@ addEsriClusterDependency <- function(map) {
 
 esriGeocoderDependency <- function() {
   list(
-    htmltools::htmlDependency(
-      "esri.leaflet.geocoder",version = "1.0.2",
-      system.file("htmlwidgets/lib/esri-geocoder", package = "leaflet.esri"),
-      script = c("esri-leaflet-geocoder.js"),
-      stylesheet = c("esri-leaflet-geocoder.css")
-    )
+    # // "esri-leaflet-geocoder": "2.2.9",
+    html_dep_prod("esri-leaflet-geocoder", "2.2.9", has_style = TRUE)
   )
 }
 
@@ -61,12 +89,12 @@ addEsriGeocoderDependency <- function(map) {
 
 esriHeatmapDependency <- function() {
   list(
-    htmltools::htmlDependency(
-      "esri.leaflet.heatmap",version = "1.0.2",
-      system.file("htmlwidgets/lib/esri-heatmap", package = "leaflet.esri"),
-      script = c("leaflet-heat.js",
-                 "esri-leaflet-heatmap-feature-layer.js")
-    )
+    # // "simpleheat": "0.4.0"
+    html_dep_prod("simpleheat", "0.4.0"),
+    # // "leaflet.heat": "0.2.0",
+    html_dep_prod("leaflet-heat", "0.2.0"),
+    # // "esri-leaflet-heatmap": "2.0.0",
+    html_dep_prod("esri-leaflet-heatmap", "2.0.0", has_binding = TRUE)
   )
 }
 
@@ -82,11 +110,8 @@ addEsriHeatmapDependency <- function(map) {
 
 esriRenderersDependency <- function() {
   list(
-    htmltools::htmlDependency(
-      "esri.leaflet.renderers",version = "1.0.2",
-      system.file("htmlwidgets/lib/esri-renderers", package = "leaflet.esri"),
-      script = c("esri-leaflet-renderers.js")
-    )
+    # // "esri-leaflet-renderers": "2.0.6",
+    html_dep_prod("esri-leaflet-renderers", "2.0.6")
   )
 }
 

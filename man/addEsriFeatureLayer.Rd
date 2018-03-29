@@ -30,7 +30,7 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
 \item{group}{The name of the group this layer should be added to.
 the same parameter under \code{\link{addTiles}})}
 
-\item{markerType}{The type of marker.  either 'marker' or 'circleMarker'}
+\item{markerType}{The type of marker.  either "marker" or "circleMarker"}
 
 \item{markerIcons}{Icons for Marker.}
 
@@ -95,4 +95,28 @@ options}
 }
 \description{
 FeatureLayer is used to visualize, style, query and edit vector geographic data hosted in both ArcGIS Online and published using ArcGIS Server. Copyright text from the service is added to map attribution automatically.
+}
+\examples{
+leaflet() \%>\%
+  addEsriBasemapLayer(esriBasemapLayers$Streets) \%>\%
+  setView(-122.667, 45.526, 13) \%>\%
+  addEsriFeatureLayer(
+    url = paste0("https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/",
+                 "Heritage_Trees_Portland/FeatureServer/0"),
+    useServiceSymbology = TRUE,
+    labelProperty = "COMMON_NAM", labelOptions = labelOptions(textsize = "12px"),
+  popupProperty = JS(paste0(
+    "function(feature) {",
+    "  return L.Util.template(",
+    "    \\"<h3>{COMMON_NAM}</h3><hr />",
+    "      <p>This tree is located at {ADDRESS} and its scientific name is {SCIENTIFIC}.</p>",
+    "    \\",",
+    "    feature.properties",
+    "  );",
+    "}"
+  )))
+
+## for more examples see
+# browseURL(system.file("examples/featureLayers.R", package = "leaflet.esri"))
+# browseURL(system.file("examples/multipleFeatureLayers.R", package = "leaflet.esri"))
 }

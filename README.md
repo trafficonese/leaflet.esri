@@ -1,5 +1,5 @@
 
-[![Project Status: Active – The project is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Last-changedate](https://img.shields.io/badge/last%20change-2017--06--25-green.svg)](/commits/master) [![License: GPL-3](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://opensource.org/licenses/GPL-3.0) [![keybase verified](https://img.shields.io/badge/keybase-verified-brightgreen.svg)](https://gist.github.com/bhaskarvk/46fbf2ba7b5713151d7e) [![Travis-CI Build Status](https://travis-ci.org/bhaskarvk/leaflet.esri.svg?branch=master)](https://travis-ci.org/bhaskarvk/leaflet.esri) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/bhaskarvk/leaflet.esri?branch=master&svg=true)](https://ci.appveyor.com/project/bhaskarvk/leaflet.esri) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.1.0-6666ff.svg)](https://cran.r-project.org/) [![packageversion](https://img.shields.io/badge/Package%20version-0.2-orange.svg?style=flat-square)](commits/master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/leaflet.esri)](https://cran.r-project.org/package=leaflet.esri) [![](http://cranlogs.r-pkg.org/badges/grand-total/leaflet.esri)](http://cran.rstudio.com/web/packages/leaflet.esri/index.html)
+[![Project Status: Active – The project is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--27-green.svg)](/commits/master) [![License: GPL-3](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://opensource.org/licenses/GPL-3.0) [![keybase verified](https://img.shields.io/badge/keybase-verified-brightgreen.svg)](https://gist.github.com/bhaskarvk/46fbf2ba7b5713151d7e) [![Travis-CI Build Status](https://travis-ci.org/bhaskarvk/leaflet.esri.svg?branch=master)](https://travis-ci.org/bhaskarvk/leaflet.esri) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/bhaskarvk/leaflet.esri?branch=master&svg=true)](https://ci.appveyor.com/project/bhaskarvk/leaflet.esri) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.1.0-6666ff.svg)](https://cran.r-project.org/) [![packageversion](https://img.shields.io/badge/Package%20version-1.0.0-orange.svg?style=flat-square)](commits/master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/leaflet.esri)](https://cran.r-project.org/package=leaflet.esri) [![](http://cranlogs.r-pkg.org/badges/grand-total/leaflet.esri)](http://cran.rstudio.com/web/packages/leaflet.esri/index.html)
 
 ESRI Leaflet bindings.
 ----------------------
@@ -28,20 +28,18 @@ As of Feb, 2017 the leaflet R package is based on version 0.7.7 of the Leaflet J
 <tbody>
 <tr class="odd">
 <td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v0.7.7">0.7.x</a></td>
-<td><a href="https://github.com/rstudio/leaflet">1.1</a></td>
+<td><a href="https://github.com/rstudio/leaflet/releases/tag/v1.1.0">1.1</a></td>
 <td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v1.0.4">1.0.4</a></td>
 <td>0.2.x</td>
 </tr>
 <tr class="even">
-<td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v1.0.1">1.x</a></td>
-<td>? <sup>1</sup></td>
-<td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v2.0.4">2.x</a></td>
-<td>?</td>
+<td><a href="https://github.com/Leaflet/Leaflet/releases/tag/v1.3.1">1.3.1</a></td>
+<td><a href="https://github.com/rstudio/leaflet/releases/tag/v2.0.0">2.0.0</a></td>
+<td><a href="https://github.com/Esri/esri-leaflet/releases/tag/v2.1.4">2.1.4</a></td>
+<td>1.0.0</td>
 </tr>
 </tbody>
 </table>
-
-1 - The R package has not yet been proted to Leaflet JS 1.x
 
 ### Features Tracking
 
@@ -71,8 +69,8 @@ Layers provide visualization capabilities for data hosted in Feature Services, M
 -   [Dynamic Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html) ✔️
 -   [Image Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/image-map-layer.html) ✔️
 -   [Tiled Map Layer](https://esri.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html) ✔️
--   ~~[Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)~~ Cannot be supported for now as this requires leaflet 1.x.
--   [~~Vector Layer~~](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html) Cannot be supported for now as this requires leaflet 1.x.
+-   [Vector Basemap](https://esri.github.io/esri-leaflet/api-reference/layers/vector-basemap.html)
+-   [Vector Layer](https://esri.github.io/esri-leaflet/api-reference/layers/vector-layer.html)
 
 #### Controls
 
