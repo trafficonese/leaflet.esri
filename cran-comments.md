@@ -6,10 +6,11 @@ This submission is in conjunction with the `leaflet` package submission.
 ## Test environments
 * local OS X install, R 3.4.4
 * ubuntu 12.04 (on travis-ci), R version 3.4.4 (2017-01-27)
-
-* win-builder (devel and release)
-  * Could **NOT** test
-  * Latest leaflet and leaflet.extras versions are required
+* rhub
+  * Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+    * https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-bc7b8a1c70d745c7b483aab04013735d
+  * Windows Server 2008 R2 SP1, R-release, 32/64 bit
+    * https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-ebcdd73cf3874be792acedd0eaf0d91a
 
 ## R CMD check results
 
