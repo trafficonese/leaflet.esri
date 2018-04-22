@@ -19,8 +19,9 @@ Depends:
 Encoding: UTF-8
 LazyData: true
 Imports:
-    htmlwidgets,
     htmltools
+Suggests:
+    htmlwidgets
 URL: https://github.com/bhaskarvk/leaflet.esri,https://bhaskarvk.github.io/leaflet.esri/
 BugReports: https://github.com/bhaskarvk/leaflet.esri/issues
 RoxygenNote: 6.0.1
