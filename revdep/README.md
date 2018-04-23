@@ -9,7 +9,7 @@
 |language |(EN)                         |
 |collate  |en_US.UTF-8                  |
 |tz       |America/New_York             |
-|date     |2018-04-20                   |
+|date     |2018-04-22                   |
 
 # Dependencies
 
@@ -31,13 +31,13 @@
 |gtable         |0.2.0    |0.2.0    |   |
 |htmltools      |0.3.6    |0.3.6    |   |
 |htmlwidgets    |1.2      |1.2      |   |
-|httpuv         |1.4.0    |1.4.0    |   |
+|httpuv         |1.4.1    |1.4.1    |   |
 |jsonlite       |1.5      |1.5      |   |
 |labeling       |0.3      |0.3      |   |
 |later          |0.7.1    |0.7.1    |   |
 |lazyeval       |0.2.1    |0.2.1    |   |
-|leaflet        |1.1.0    |2.0.0    |*  |
-|leaflet.extras |0.2      |1.0.0    |*  |
+|leaflet        |2.0.0    |2.0.0    |   |
+|leaflet.extras |1.0.0    |1.0.0    |   |
 |magrittr       |1.5      |1.5      |   |
 |markdown       |0.8      |0.8      |   |
 |mime           |0.5      |0.5      |   |
