@@ -1,5 +1,25 @@
 # Comments
 
+## 2018-4-23
+Resubmitting with leaflet and leaflet.extras added to cran.  Updated test environments below.
+
+Thank you for you patience!
+
+- Barret
+
+
+## 2018-4-22
+leafet.extras accpeted
+- CRAN
+
+## 2018-4-20
+leafet accpeted
+- CRAN
+
+## 2018-4-20
+...submit leaflet [and leaflet.extras] first...
+- Uwe
+
 ## 2018-4-20
 
 This submission is in conjunction with the `leaflet` and `leaflet.extras` package submissions.
@@ -14,59 +34,30 @@ This submission is done by Barret Schloerke <barret@rstudio.com> on behalf of Bh
   * 0 errors | 0 warnings | 0 notes
 * ubuntu 12.04 (on travis-ci), R version 3.4.4 (2017-01-27)
   * 0 errors | 0 warnings | 0 notes
+* winbuilder x86_64-w64-mingw32, R devel 3.5.0 RC (2018-04-16 r74625)
+  * 0 errors | 0 warnings | 0 notes
 
-
-I believe the warning and note below are transient within r-hub.
-  * NOTE: Unknown, possibly mis-spelled, fields in DESCRIPTION
-    * This field has been removed in submission build.
-    * Was needed to test with rhub directly as the development branch of leaflet was required.
 
 * r-hub
   * Platform:   Windows Server 2008 R2 SP1, R-release, 32/64 bit
-    https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-be09fad309974de3a0876f42510b3d4c
-    ❯ checking CRAN incoming feasibility ... NOTE
-      Maintainer: 'Bhaskar Karambelkar <bhaskarvk@gmail.com>'
+    http://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-5dc963a4289a4e0f80565393588614cd
 
-      Unknown, possibly mis-spelled, fields in DESCRIPTION:
-        'Remotes'
-
-    0 errors ✔ | 0 warnings ✔ | 1 note ✖
+    0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
   * Platform:   Windows Server 2008 R2 SP1, R-devel, 32/64 bit
-    https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-79f802cdf0344332b88ae4770c001cc9
-    ❯ checking CRAN incoming feasibility ... NOTE
-      Maintainer: 'Bhaskar Karambelkar <bhaskarvk@gmail.com>'
+    http://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-c6ecaf59f25248e1b76b25888260484d
 
-      Unknown, possibly mis-spelled, fields in DESCRIPTION:
-        'Remotes'
-
-    0 errors ✔ | 0 warnings ✔ | 1 note ✖
+    0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
   * Platform:   Ubuntu Linux 16.04 LTS, R-release, GCC
-    * checked with `_R_CHECK_FORCE_SUGGESTS_=0`
-    https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-540540a8a42c4e2580c5842f0fbb77f7
-    ❯ checking CRAN incoming feasibility ... NOTE
-      Maintainer: 'Bhaskar Karambelkar <bhaskarvk@gmail.com>'
+    http://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-a0507f89bccf4368ab420734f86bf68e
 
-      Unknown, possibly mis-spelled, fields in DESCRIPTION:
-        'Remotes'
-
-    0 errors ✔ | 0 warnings ✔ | 1 note ✖
+    0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
   * Platform:   Fedora Linux, R-devel, clang, gfortran
-    * checked with `_R_CHECK_FORCE_SUGGESTS_=0`
-    https://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-f2d5fa14ce41439ca85aad0bb09b3b9a
-    ❯ checking CRAN incoming feasibility ... NOTE
-      Maintainer: 'Bhaskar Karambelkar <bhaskarvk@gmail.com>'
+    http://builder.r-hub.io/status/leaflet.esri_1.0.0.tar.gz-a9ae509b77ca43599f785dc787b5a37d
 
-      Unknown, possibly mis-spelled, fields in DESCRIPTION:
-        'Remotes'
-
-    0 errors ✔ | 0 warnings ✔ | 1 note ✖
-
-## R CMD check results
-
-0 errors | 0 warnings | 0 note
+    0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
 
 ## Reverse dependencies
