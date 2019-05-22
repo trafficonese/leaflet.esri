@@ -4,8 +4,9 @@
 \alias{tiledMapLayerOptions}
 \title{Options for TiledMapLayer.}
 \usage{
-tiledMapLayerOptions(correctZoomLevels = TRUE, zoomOffsetAllowance = 0.1,
-  proxy = NULL, useCors = TRUE, token = NULL, tileOptions = NULL)
+tiledMapLayerOptions(correctZoomLevels = TRUE,
+  zoomOffsetAllowance = 0.1, proxy = NULL, useCors = TRUE,
+  token = NULL, tileOptions = NULL)
 }
 \arguments{
 \item{correctZoomLevels}{Correct Zoom levels.}
@@ -18,7 +19,7 @@ tiledMapLayerOptions(correctZoomLevels = TRUE, zoomOffsetAllowance = 0.1,
 
 \item{token}{Use this token to authenticate all calls to the service.}
 
-\item{tileOptions}{Other options for tile layer. You can pass \code{\link[leaflet]{tileOptions}()}.}
+\item{tileOptions}{Other options for tile layer. You can pass \code{\link[leaflet:tileOptions]{leaflet::tileOptions()}}.}
 }
 \description{
 Options for TiledMapLayer.

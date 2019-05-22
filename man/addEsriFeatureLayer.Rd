@@ -10,9 +10,10 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
   markerOptions = leaflet::markerOptions(), clusterOptions = NULL,
   clusterId = NULL, labelProperty = NULL,
   labelOptions = leaflet::labelOptions(), popupProperty = NULL,
-  popupOptions = leaflet::popupOptions(), stroke = TRUE, color = "#03F",
-  weight = 5, opacity = 0.5, fill = TRUE, fillColor = color,
-  fillOpacity = 0.2, dashArray = NULL, smoothFactor = 1, noClip = FALSE,
+  popupOptions = leaflet::popupOptions(), stroke = TRUE,
+  color = "#03F", weight = 5, opacity = 0.5, fill = TRUE,
+  fillColor = color, fillOpacity = 0.2, dashArray = NULL,
+  smoothFactor = 1, noClip = FALSE,
   pathOptions = leaflet::pathOptions(), highlightOptions = NULL,
   fitBounds = FALSE)
 }
@@ -28,7 +29,7 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
 \item{layerId}{A unique ID for the layer.}
 
 \item{group}{The name of the group this layer should be added to.
-the same parameter under \code{\link{addTiles}})}
+the same parameter under \code{\link[=addTiles]{addTiles()}})}
 
 \item{markerType}{The type of marker.  either "marker" or "circleMarker"}
 
@@ -39,12 +40,12 @@ Can be a JS function which accepts a feature and returns an index of \code{marke
 In either case the result must be one of the indexes of markerIcons.}
 
 \item{markerOptions}{The options for markers
-Can be a single marker using \code{\link[leaflet]{makeIcon}}
-or a list of markers using \code{\link[leaflet]{iconList}}}
+Can be a single marker using \code{\link[leaflet:makeIcon]{leaflet::makeIcon()}}
+or a list of markers using \code{\link[leaflet:iconList]{leaflet::iconList()}}}
 
 \item{clusterOptions}{if not \code{NULL}, markers will be clustered using
 \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
- you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
+you can use \code{\link[leaflet:markerClusterOptions]{leaflet::markerClusterOptions()}} to specify marker cluster
 options}
 
 \item{clusterId}{the id for the marker cluster layer}
@@ -52,13 +53,13 @@ options}
 \item{labelProperty}{The property to use for the label.
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
 
-\item{labelOptions}{A Vector of \code{\link{labelOptions}} to provide label
+\item{labelOptions}{A Vector of \code{\link[=labelOptions]{labelOptions()}} to provide label
 options for each label. Default \code{NULL}}
 
 \item{popupProperty}{The property to use for popup content
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
 
-\item{popupOptions}{A Vector of \code{\link{popupOptions}} to provide popups}
+\item{popupOptions}{A Vector of \code{\link[=popupOptions]{popupOptions()}} to provide popups}
 
 \item{stroke}{whether to draw stroke along the path (e.g. the borders of
 polygons or circles)}
@@ -77,8 +78,7 @@ circles)}
 \item{fillOpacity}{fill opacity}
 
 \item{dashArray}{a string that defines the stroke
-\href{https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray}{dash
-pattern}}
+\href{https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray}{dash pattern}}
 
 \item{smoothFactor}{how much to simplify the polyline on each zoom level
 (more means better performance and less accurate representation)}
@@ -88,7 +88,7 @@ pattern}}
 \item{pathOptions}{Options for shapes}
 
 \item{highlightOptions}{Options for highlighting the shape on mouse over.
-you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight}
+you can use \code{\link[leaflet:highlightOptions]{leaflet::highlightOptions()}} to specify highlight}
 
 \item{fitBounds}{Whether to set the maps bounds to fit the data in the featureLayer
 options}

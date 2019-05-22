@@ -21,7 +21,7 @@ addEsriHeatmapFeatureLayer(map, url, radius = 25, gradient = NULL,
 \item{layerId}{A unique ID for the layer.}
 
 \item{group}{The name of the group this layer should be added to.
-the same parameter under \code{\link{addTiles}})}
+the same parameter under \code{\link[=addTiles]{addTiles()}})}
 }
 \description{
 Add Esri Heatmap Feature Layer.

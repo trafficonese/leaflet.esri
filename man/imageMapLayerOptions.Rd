@@ -6,9 +6,10 @@
 \usage{
 imageMapLayerOptions(format = "jpgpng", f = "json", opacity = 1,
   position = "front", maxZoom = NULL, minZoom = NULL, from = NULL,
-  to = NULL, bandIds = NULL, noData = NULL, noDataInterpretation = NULL,
-  pixelType = NULL, renderingRule = NULL, mosaicRule = NULL,
-  token = NULL, proxy = NULL, useCors = TRUE, ...)
+  to = NULL, bandIds = NULL, noData = NULL,
+  noDataInterpretation = NULL, pixelType = NULL,
+  renderingRule = NULL, mosaicRule = NULL, token = NULL,
+  proxy = NULL, useCors = TRUE, ...)
 }
 \arguments{
 \item{format}{Output format of the image.}
