@@ -4,10 +4,11 @@
 \alias{dynamicMapLayerOptions}
 \title{Options for dynamic map layer.}
 \usage{
-dynamicMapLayerOptions(format = "png24", transparent = TRUE, f = "json",
-  attribution = "", layers = NULL, layerDefs = NULL, opacity = 1,
-  position = "front", maxZoom = NULL, minZoom = NULL,
-  dynamicLayers = NULL, token = NULL, proxy = NULL, useCors = TRUE, ...)
+dynamicMapLayerOptions(format = "png24", transparent = TRUE,
+  f = "json", attribution = "", layers = NULL, layerDefs = NULL,
+  opacity = 1, position = "front", maxZoom = NULL, minZoom = NULL,
+  dynamicLayers = NULL, token = NULL, proxy = NULL, useCors = TRUE,
+  ...)
 }
 \arguments{
 \item{format}{Output format of the image.}

@@ -10,9 +10,10 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
   markerOptions = leaflet::markerOptions(), clusterOptions = NULL,
   clusterId = NULL, labelProperty = NULL,
   labelOptions = leaflet::labelOptions(), popupProperty = NULL,
-  popupOptions = leaflet::popupOptions(), stroke = TRUE, color = "#03F",
-  weight = 5, opacity = 0.5, fill = TRUE, fillColor = color,
-  fillOpacity = 0.2, dashArray = NULL, smoothFactor = 1, noClip = FALSE,
+  popupOptions = leaflet::popupOptions(), stroke = TRUE,
+  color = "#03F", weight = 5, opacity = 0.5, fill = TRUE,
+  fillColor = color, fillOpacity = 0.2, dashArray = NULL,
+  smoothFactor = 1, noClip = FALSE,
   pathOptions = leaflet::pathOptions(), highlightOptions = NULL,
   fitBounds = FALSE)
 }

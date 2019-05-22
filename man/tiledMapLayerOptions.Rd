@@ -4,8 +4,9 @@
 \alias{tiledMapLayerOptions}
 \title{Options for TiledMapLayer.}
 \usage{
-tiledMapLayerOptions(correctZoomLevels = TRUE, zoomOffsetAllowance = 0.1,
-  proxy = NULL, useCors = TRUE, token = NULL, tileOptions = NULL)
+tiledMapLayerOptions(correctZoomLevels = TRUE,
+  zoomOffsetAllowance = 0.1, proxy = NULL, useCors = TRUE,
+  token = NULL, tileOptions = NULL)
 }
 \arguments{
 \item{correctZoomLevels}{Correct Zoom levels.}
