@@ -22,7 +22,7 @@
 #' @param precision Integer How many digits of precision to request from the server.
 #' Wikipedia has a great reference of digit precision to meters at <http://en.wikipedia.org/wiki/Decimal_degrees>.
 #' @param token String If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param proxy URL of an [ArcGIS API for JavaScript proxy](https://developers.arcgis.com/javascript/jshelp/ags_proxy.html) or [ArcGIS Resource Proxy](https://github.com/Esri/resource-proxy) to use for proxying requests.
 #' @param useCors Boolean If this service should use CORS when making GET requests.
 #' @param renderer L.svg or L.canvas The vector renderer to use to draw the service.
 #' Usually L.svg but setting to L.canvas contains performance benefits for large polygon layers.
@@ -72,7 +72,7 @@ featureLayerOptions <- function(
 #'
 #' FeatureLayer is used to visualize, style, query and edit vector geographic data hosted in both ArcGIS Online and published using ArcGIS Server. Copyright text from the service is added to map attribution automatically.
 #' @param map The leaflet map
-#' @param url url of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/}{FeatureService} or \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/}{MapService}.
+#' @param url url of the [FeatureService](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/) or [MapService](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/).
 #' @param useServiceSymbology whether to use the symbology set when a service was published.
 #' @param options options for the featurelayer
 #' @param layerId A unique ID for the layer.
@@ -87,7 +87,7 @@ featureLayerOptions <- function(
 #' Can be a single marker using [leaflet::makeIcon()]
 #' or a list of markers using [leaflet::iconList()]
 #' @param clusterOptions if not `NULL`, markers will be clustered using
-#'   \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
+#'   [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster);
 #'    you can use [leaflet::markerClusterOptions()] to specify marker cluster
 #'   options
 #' @param clusterId the id for the marker cluster layer
@@ -108,8 +108,8 @@ featureLayerOptions <- function(
 #' @param fillColor fill color
 #' @param fillOpacity fill opacity
 #' @param dashArray a string that defines the stroke
-#'   \href{https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray}{dash
-#'   pattern}
+#'   [dash
+#'   pattern](https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray)
 #' @param smoothFactor how much to simplify the polyline on each zoom level
 #'   (more means better performance and less accurate representation)
 #' @param noClip whether to disable polyline clipping
@@ -217,7 +217,7 @@ addEsriFeatureLayer <- function(
 #' Add Esri Heatmap Feature Layer.
 #'
 #' @param map The leaflet map
-#' @param url url of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/}{FeatureService} or \href{http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/}{MapService}.
+#' @param url url of the [FeatureService](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Feature_Service/02r3000000z2000000/) or [MapService](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/).
 #' @param options options for the featurelayer
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.

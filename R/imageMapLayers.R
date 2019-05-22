@@ -16,10 +16,10 @@
 #' @param pixelType Leave pixelType as unspecified, or UNKNOWN, in most exportImage use cases,
 #'   unless such pixelType is desired.
 #'   Possible values: C128, C64, F32, F64, S16, S32, S8, U1, U16, U2, U32, U4, U8, UNKNOWN.
-#' @param renderingRule A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Raster_function_objects/02r3000000rv000000/}{raster function}
-#' @param mosaicRule A JSON representation of a \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Mosaic_rule_objects/02r3000000s4000000/}{mosaic rule}
+#' @param renderingRule A JSON representation of a [raster function](http://resources.arcgis.com/en/help/arcgis-rest-api/#/Raster_function_objects/02r3000000rv000000/)
+#' @param mosaicRule A JSON representation of a [mosaic rule](http://resources.arcgis.com/en/help/arcgis-rest-api/#/Mosaic_rule_objects/02r3000000s4000000/)
 #' @param token If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param proxy URL of an [ArcGIS API for JavaScript proxy](https://developers.arcgis.com/javascript/jshelp/ags_proxy.html) or [ArcGIS Resource Proxy](https://github.com/Esri/resource-proxy) to use for proxying requests.
 #' @param useCors If this service should use CORS when making GET requests.
 #' @param ... extra options
 #' @export
@@ -69,7 +69,7 @@ imageMapLayerOptions <- function(
 #'
 #' Image Services provide access to raster data through a web service.
 #' @param map The leaflet map
-#' @param url URL of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Image_Service/02r3000000q8000000/}{Image Service}
+#' @param url URL of the [Image Service](http://resources.arcgis.com/en/help/arcgis-rest-api/#/Image_Service/02r3000000q8000000/)
 #' @param options options for the image map layer.
 #' @param popupFunction Uses the provided function to create a popup that will
 #'   identify features whenever the map is clicked.

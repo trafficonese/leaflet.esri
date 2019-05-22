@@ -12,7 +12,7 @@
 #' @param minZoom Furthest zoom level the layer will be displayed on the map.
 #' @param dynamicLayers JSON object literal used to manipulate the layer symbology defined in the service itself. Requires a 10.1 (or above) map service which supports dynamicLayers requests.
 #' @param token If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param proxy URL of an [ArcGIS API for JavaScript proxy](https://developers.arcgis.com/javascript/jshelp/ags_proxy.html) or [ArcGIS Resource Proxy](https://github.com/Esri/resource-proxy) to use for proxying requests.
 #' @param useCors If this service should use CORS when making GET requests.
 #' @param ... extra options
 #' @export
@@ -60,7 +60,7 @@ dynamicMapLayerOptions <- function(
 #' identifying features and more.
 #' Also supports custom popups and identification of features.
 #' @param map The leaflet map
-#' @param url URL of the \href{http://resources.arcgis.com/en/help/arcgis-rest-api/#/Map_Service/02r3000000w2000000/}{Map Service}.
+#' @param url URL of the [Map Service](http://resources.arcgis.com/en/help/arcgis-rest-api/#/Map_Service/02r3000000w2000000/).
 #' @param options options for the dynamic map layer.
 #' @param popupFunction Uses the provided function to create a popup that will
 #'   identify features whenever the map is clicked.
