@@ -19,7 +19,7 @@ dynamicMapLayerOptions(format = "png24", transparent = TRUE,
 
 \item{attribution}{Attribution from service metadata copyright text is automatically displayed in Leaflet's default control. This property can be used for customization.}
 
-\item{layers}{An array of Layer IDs like [3, 4, 5] to show from the service.}
+\item{layers}{An array of Layer IDs like \code{JS("[3, 4, 5]")} to show from the service.}
 
 \item{layerDefs}{A string representing a query to run against the service before the image is rendered. This can be a string like "3:STATE_NAME="Kansas"" or an object mapping different queries to specific layers {3:"STATE_NAME="Kansas"", 2:"POP2007>25000"}.}
 

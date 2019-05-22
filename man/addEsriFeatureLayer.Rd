@@ -45,7 +45,7 @@ or a list of markers using \code{\link[leaflet]{iconList}}}
 
 \item{clusterOptions}{if not \code{NULL}, markers will be clustered using
 \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
- you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
+you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
 options}
 
 \item{clusterId}{the id for the marker cluster layer}

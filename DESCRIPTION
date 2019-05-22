@@ -25,3 +25,4 @@ Suggests:
 URL: https://github.com/bhaskarvk/leaflet.esri,https://bhaskarvk.github.io/leaflet.esri/
 BugReports: https://github.com/bhaskarvk/leaflet.esri/issues
 RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
