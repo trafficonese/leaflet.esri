@@ -84,11 +84,11 @@ featureLayerOptions <- function(
 #' Can be a JS function which accepts a feature and returns an index of `markerIcons`.
 #' In either case the result must be one of the indexes of markerIcons.
 #' @param markerOptions The options for markers
-#' Can be a single marker using \code{\link[leaflet]{makeIcon}}
-#' or a list of markers using \code{\link[leaflet]{iconList}}
+#' Can be a single marker using [leaflet::makeIcon()]
+#' or a list of markers using [leaflet::iconList()]
 #' @param clusterOptions if not `NULL`, markers will be clustered using
 #'   \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
-#'    you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
+#'    you can use [leaflet::markerClusterOptions()] to specify marker cluster
 #'   options
 #' @param clusterId the id for the marker cluster layer
 #' @param labelProperty The property to use for the label.
@@ -115,7 +115,7 @@ featureLayerOptions <- function(
 #' @param noClip whether to disable polyline clipping
 #' @param pathOptions Options for shapes
 #' @param highlightOptions Options for highlighting the shape on mouse over.
-#'    you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight
+#'    you can use [leaflet::highlightOptions()] to specify highlight
 #' @param fitBounds Whether to set the maps bounds to fit the data in the featureLayer
 #'   options
 #' @export

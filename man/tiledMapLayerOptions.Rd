@@ -19,7 +19,7 @@ tiledMapLayerOptions(correctZoomLevels = TRUE,
 
 \item{token}{Use this token to authenticate all calls to the service.}
 
-\item{tileOptions}{Other options for tile layer. You can pass \code{\link[leaflet]{tileOptions}()}.}
+\item{tileOptions}{Other options for tile layer. You can pass \code{\link[leaflet:tileOptions]{leaflet::tileOptions()}}.}
 }
 \description{
 Options for TiledMapLayer.

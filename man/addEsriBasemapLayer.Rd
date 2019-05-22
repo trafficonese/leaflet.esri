@@ -18,7 +18,7 @@ addEsriBasemapLayer(map, key, autoLabels = FALSE, layerId = NULL,
 
 \item{group}{The group this layer belongs to.}
 
-\item{options}{Basemap Layer Options. You can pass \code{\link[leaflet]{tileOptions}()}.}
+\item{options}{Basemap Layer Options. You can pass \code{\link[leaflet:tileOptions]{leaflet::tileOptions()}}.}
 }
 \description{
 Adds a ArcGIS Basemap layer

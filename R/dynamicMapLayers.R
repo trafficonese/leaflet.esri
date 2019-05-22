@@ -67,7 +67,7 @@ dynamicMapLayerOptions <- function(
 #'   Your function will be passed a GeoJSON FeatureCollection of the features
 #'    at the clicked location and should return the appropriate HTML.
 #'    If you do not want to open the popup when there are no results, return false.
-#' @param popupOptions See \code{\link[leaflet]{popupOptions}}.
+#' @param popupOptions See [leaflet::popupOptions()].
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
 #' @export

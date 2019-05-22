@@ -21,7 +21,7 @@ Your function will be passed a GeoJSON FeatureCollection of the features
 at the clicked location and should return the appropriate HTML.
 If you do not want to open the popup when there are no results, return false.}
 
-\item{popupOptions}{See \code{\link[leaflet]{popupOptions}}.}
+\item{popupOptions}{See \code{\link[leaflet:popupOptions]{leaflet::popupOptions()}}.}
 
 \item{layerId}{A unique ID for the layer.}
 

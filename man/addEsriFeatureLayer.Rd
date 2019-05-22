@@ -40,12 +40,12 @@ Can be a JS function which accepts a feature and returns an index of \code{marke
 In either case the result must be one of the indexes of markerIcons.}
 
 \item{markerOptions}{The options for markers
-Can be a single marker using \code{\link[leaflet]{makeIcon}}
-or a list of markers using \code{\link[leaflet]{iconList}}}
+Can be a single marker using \code{\link[leaflet:makeIcon]{leaflet::makeIcon()}}
+or a list of markers using \code{\link[leaflet:iconList]{leaflet::iconList()}}}
 
 \item{clusterOptions}{if not \code{NULL}, markers will be clustered using
 \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
-you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
+you can use \code{\link[leaflet:markerClusterOptions]{leaflet::markerClusterOptions()}} to specify marker cluster
 options}
 
 \item{clusterId}{the id for the marker cluster layer}
@@ -89,7 +89,7 @@ pattern}}
 \item{pathOptions}{Options for shapes}
 
 \item{highlightOptions}{Options for highlighting the shape on mouse over.
-you can use \code{\link[leaflet]{highlightOptions}()} to specify highlight}
+you can use \code{\link[leaflet:highlightOptions]{leaflet::highlightOptions()}} to specify highlight}
 
 \item{fitBounds}{Whether to set the maps bounds to fit the data in the featureLayer
 options}
