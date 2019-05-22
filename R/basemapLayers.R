@@ -1,7 +1,7 @@
 #' Esri Basemap Layers.
 #'
 #' BasemapLayer is used to display Esri hosted basemaps and attributes data providers appropriately. The Terms of Use for Esri hosted services apply to all Leaflet applications.
-#' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html}.
+#' Taken from <https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html>.
 #' @export
 esriBasemapLayers <- list(
   "Streets" = "Streets",
@@ -16,7 +16,7 @@ esriBasemapLayers <- list(
 
 #' Esri basemap labels.
 #'
-#' Taken from \url{https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels}.
+#' Taken from <https://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html#optional-labels>.
 #' @export
 esriBasemapLabels <- list(
   "OceansLabels" = "OceansLabels",

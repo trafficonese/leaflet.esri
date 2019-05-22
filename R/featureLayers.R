@@ -1,7 +1,7 @@
 #' Options for featureLayers.
 #'
 #' @param where String An optional expression to filter features server side.
-#'  String values should be denoted using single quotes ie: where: "FIELDNAME = "field value""; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.
+#'  String values should be denoted using single quotes ie: where: "FIELDNAME = "field value""; More information about valid SQL syntax can be found at <http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/>.
 #' @param minZoom Integer Minimum zoom level of the map that features will display.
 #' example: minZoom:0
 #' @param maxZoom Integer Maximum zoom level of the map that features will
@@ -20,7 +20,7 @@
 #' @param simplifyFactor Integer How much to simplify polygons and polylines.
 #' More means better performance, and less means more accurate representation.
 #' @param precision Integer How many digits of precision to request from the server.
-#' Wikipedia has a great reference of digit precision to meters at \url{http://en.wikipedia.org/wiki/Decimal_degrees}.
+#' Wikipedia has a great reference of digit precision to meters at <http://en.wikipedia.org/wiki/Decimal_degrees>.
 #' @param token String If you pass a token in your options it will be included in all requests to the service.
 #' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
 #' @param useCors Boolean If this service should use CORS when making GET requests.
@@ -81,12 +81,12 @@ featureLayerOptions <- function(
 #' @param markerType The type of marker.  either "marker" or "circleMarker"
 #' @param markerIcons Icons for Marker.
 #' @param markerIconProperty The property of the feature to use for marker icon.
-#' Can be a JS function which accepts a feature and returns an index of \code{markerIcons}.
+#' Can be a JS function which accepts a feature and returns an index of `markerIcons`.
 #' In either case the result must be one of the indexes of markerIcons.
 #' @param markerOptions The options for markers
 #' Can be a single marker using \code{\link[leaflet]{makeIcon}}
 #' or a list of markers using \code{\link[leaflet]{iconList}}
-#' @param clusterOptions if not \code{NULL}, markers will be clustered using
+#' @param clusterOptions if not `NULL`, markers will be clustered using
 #'   \href{https://github.com/Leaflet/Leaflet.markercluster}{Leaflet.markercluster};
 #'    you can use \code{\link[leaflet]{markerClusterOptions}()} to specify marker cluster
 #'   options
@@ -94,7 +94,7 @@ featureLayerOptions <- function(
 #' @param labelProperty The property to use for the label.
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
 #' @param labelOptions A Vector of \code{\link{labelOptions}} to provide label
-#' options for each label. Default \code{NULL}
+#' options for each label. Default `NULL`
 #' @param popupProperty The property to use for popup content
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
 #' @param popupOptions A Vector of \code{\link{popupOptions}} to provide popups
