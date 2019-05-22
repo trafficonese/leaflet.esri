@@ -77,7 +77,7 @@ featureLayerOptions <- function(
 #' @param options options for the featurelayer
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
-#'   the same parameter under \code{\link{addTiles}})
+#'   the same parameter under [addTiles()])
 #' @param markerType The type of marker.  either "marker" or "circleMarker"
 #' @param markerIcons Icons for Marker.
 #' @param markerIconProperty The property of the feature to use for marker icon.
@@ -93,11 +93,11 @@ featureLayerOptions <- function(
 #' @param clusterId the id for the marker cluster layer
 #' @param labelProperty The property to use for the label.
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
-#' @param labelOptions A Vector of \code{\link{labelOptions}} to provide label
+#' @param labelOptions A Vector of [labelOptions()] to provide label
 #' options for each label. Default `NULL`
 #' @param popupProperty The property to use for popup content
 #' You can also pass in a JS function that takes in a feature and returns a text/HTML content.
-#' @param popupOptions A Vector of \code{\link{popupOptions}} to provide popups
+#' @param popupOptions A Vector of [popupOptions()] to provide popups
 #' @param stroke whether to draw stroke along the path (e.g. the borders of
 #'   polygons or circles)
 #' @param color stroke color
@@ -221,7 +221,7 @@ addEsriFeatureLayer <- function(
 #' @param options options for the featurelayer
 #' @param layerId A unique ID for the layer.
 #' @param group The name of the group this layer should be added to.
-#'   the same parameter under \code{\link{addTiles}})
+#'   the same parameter under [addTiles()])
 #' @param radius Radius for the heatmap
 #' @param gradient The gradient
 #' @export

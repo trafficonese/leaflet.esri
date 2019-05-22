@@ -29,7 +29,7 @@ addEsriFeatureLayer(map, url, useServiceSymbology = FALSE,
 \item{layerId}{A unique ID for the layer.}
 
 \item{group}{The name of the group this layer should be added to.
-the same parameter under \code{\link{addTiles}})}
+the same parameter under \code{\link[=addTiles]{addTiles()}})}
 
 \item{markerType}{The type of marker.  either "marker" or "circleMarker"}
 
@@ -53,13 +53,13 @@ options}
 \item{labelProperty}{The property to use for the label.
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
 
-\item{labelOptions}{A Vector of \code{\link{labelOptions}} to provide label
+\item{labelOptions}{A Vector of \code{\link[=labelOptions]{labelOptions()}} to provide label
 options for each label. Default \code{NULL}}
 
 \item{popupProperty}{The property to use for popup content
 You can also pass in a JS function that takes in a feature and returns a text/HTML content.}
 
-\item{popupOptions}{A Vector of \code{\link{popupOptions}} to provide popups}
+\item{popupOptions}{A Vector of \code{\link[=popupOptions]{popupOptions()}} to provide popups}
 
 \item{stroke}{whether to draw stroke along the path (e.g. the borders of
 polygons or circles)}
