@@ -40,6 +40,8 @@
 <![endif]-->
 
 
+
+
   </head>
 
   <body>
@@ -83,6 +85,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -90,11 +93,12 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Render and visualize Image Services from ArcGIS Online and ArcGIS Server.</h1>
     <small>Source: <a href='https://github.com/bhaskarvk/leaflet.esri/blob/master/R/imageMapLayers.R'><code>R/imageMapLayers.R</code></a></small>
+    <div class="hidden name"><code>addEsriImageMapLayer.Rd</code></div>
     </div>
 
     
@@ -148,7 +152,10 @@ Your function will be passed a GeoJSON FeatureCollection of the features
   <span class='fu'><a href='addEsriBasemapLayer.html'>addEsriBasemapLayer</a></span>(<span class='no'>esriBasemapLayers</span>$<span class='no'>Imagery</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'>setView</span>(-<span class='fl'>120.23</span>, <span class='fl'>43.5</span>, <span class='fl'>5</span>)  <span class='kw'>%&gt;%</span>
   <span class='fu'>addEsriImageMapLayer</span>(
-    <span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"http://imagery.oregonexplorer.info/arcgis/rest/services/NAIP_2011/NAIP_2011_Dynamic/ImageServer"</span>,
+    <span class='kw'>url</span> <span class='kw'>=</span> <span class='fu'>paste0</span>(
+      <span class='st'>"http://imagery.oregonexplorer.info/arcgis/rest/services/"</span>,
+      <span class='st'>"NAIP_2011/NAIP_2011_Dynamic/ImageServer"</span>
+    ),
     <span class='kw'>options</span> <span class='kw'>=</span> <span class='fu'><a href='imageMapLayerOptions.html'>imageMapLayerOptions</a></span>(<span class='kw'>bandIds</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>3</span>, <span class='fl'>0</span>, <span class='fl'>1</span>)))
 
 <span class='co'>## for more examples see</span>
@@ -176,6 +183,8 @@ Your function will be passed a GeoJSON FeatureCollection of the features
 
       </footer>
    </div>
+
+  
 
   </body>
 </html>
